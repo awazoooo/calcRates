@@ -1,0 +1,1 @@
+javascript:(function(d,s){s=d.createElement('script');s.src='https://awazoooo.github.io/calcRates/calcRates.js';d.body.appendChild(s);s=d.createElement('script');s.src='https://awazoooo.github.io/calcRates/constant.js';d.body.appendChild(s);})(document);
