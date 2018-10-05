@@ -4,8 +4,12 @@
 
 const DEFAULTVERSION = 'starplus'; // 現在のバージョン
 
-// 9/20追加曲更新
+// 10/4追加曲更新
 const constantTable = [
+    { title: "チルノおかんのさいきょう☆バイブスごはん", musicId: 635, difficulty: 3, constant: { starplus: 12.6, star: 0, airplus: 0, air: 0, plus: 0, origin: 0 }},
+    { title: "つるぺったん", musicId: 632, difficulty: 3, constant: { starplus: 12.4, star: 0, airplus: 0, air: 0, plus: 0, origin: 0 }},
+    { title: "volcanic", musicId: 625, difficulty: 3, constant: { starplus: 13.5, star: 0, airplus: 0, air: 0, plus: 0, origin: 0 }},
+    { title: "volcanic", musicId: 625, difficulty: 2, constant: { starplus: 12.4, star: 0, airplus: 0, air: 0, plus: 0, origin: 0 }},
     { title: "メニメニマニマニ", musicId: 620, difficulty: 3, constant: { starplus: 12.3, star: 0, airplus: 0, air: 0, plus: 0, origin: 0 }},
     { title: "灼熱スイッチ", musicId: 624, difficulty: 3, constant: { starplus: 12.1, star: 0, airplus: 0, air: 0, plus: 0, origin: 0 }},
     { title: "Change Our MIRAI！ (Our 7 Lights)", musicId: 614, difficulty: 3, constant: { starplus: 12.5, star: 0, airplus: 0, air: 0, plus: 0, origin: 0 }},
