@@ -1,15 +1,16 @@
 (function (){
-    const CHUNITHM_NET_GENRE_URL = "https://chunithm-net.com/mobile/MusicGenre.html";
-    const CHUNITHM_FRIENDVS_URL = "https://chunithm-net.com/mobile/FriendLevelVs.html"
-    const INTERVAL = 3000;
-    const DEFAULTVERSION = 'starplus'; // 現在のバージョン
-    const TOOLNAME = '旧verのレート計算';
-    const TOOLNAME_SYNTHESIS = 'フレンドとのベスト枠融合';
+    // const CHUNITHM_NET_GENRE_URL = "https://chunithm-net.com/mobile/MusicGenre.html";
+    var CHUNITHM_NET_GENRE_URL = "https://chunithm-net.com/mobile/record/musicGenre";
+    var CHUNITHM_FRIENDVS_URL = "https://chunithm-net.com/mobile/friend/levelVs";
+    var INTERVAL = 3000;
+    var DEFAULTVERSION = 'amazon'; // 現在のバージョン
+    var TOOLNAME = '旧verのレート計算';
+    var TOOLNAME_SYNTHESIS = 'フレンドベスト枠計算';
 
     Node.prototype.prependChild = function(e){ this.insertBefore(e,this.firstChild); }
 
-    const _ajax = function(url, type, payload) {
-        return new Promise(function(resolve, reject) {
+    var _ajax = function(url, type, payload) {
+        return new Promise((resolve, reject) => {
             $.ajax({
                 type: type,
                 url: url,
@@ -20,39 +21,95 @@
                 console.log(jqXHR, textStatus, errorThrown);
                 reject("Error occured in ajax connection." + jqXHR.responseText);
             });
-        })
+        }).catch((e) => {
+            console.log(e);
+        });
     }
 
-    const parseMusicBox = function(box) {
+    var getDifficultyId = function(diffName) {
+        if(diffName == 'master') {
+            return 3
+        } else if(diffName == 'expert') {
+            return 2
+        } else if(diffName == 'advanced') {
+            return 1
+        } else if(diffName == 'basic') {
+            return 0
+        }
+    }
+
+    var parseMusicBox = function(box) {
         if (typeof($(box).find(".text_b")[0]) == 'undefined')
             return {}
-        // 楽曲タイトルを追加
-        const musictitle = $(box).find('.music_title')[0].textContent;
-        const difficulty = difficultyToId(box.className.match(/(master|basic|advanced|expert)/)[0]);
-        const score = $(box).find(".text_b")[0].innerText.replace(/,/g,"");
+        musictitle = $(box).find('.music_title')[0].textContent
+        difficulty = getDifficultyId(box.className.match(/(master|basic|advanced|expert)/)[0]);
+        score = $(box).find(".text_b")[0].innerText.replace(/,/g,"")
 
-        return { title: musictitle, difficulty: difficulty, score: score };
+        obj = {
+            title: musictitle,
+            difficulty: difficulty,
+            score: score
+        }
+        return obj
     }
 
-    const parseMusicList = function(data) {
-        const doc = $.parseHTML(data);
-        const mb = $(doc).find(".musiclist_box");
-        let musicdata = [];
+    var parseMusicList = function(data) {
+        doc = $.parseHTML(data);
+        mb = $(doc).find(".musiclist_box")
+        var musicdata = []
         mb.each(function(i, e) {
-            const onClickAttr = $(e).find('.music_title')[0].getAttribute("onclick");
-            const attr = onClickAttr.match(/((\w+)_(\d+|\w+))/g);
-            let data = {};
-            attr.map(function(e) {
-                const p = e.split("_");
-                $.extend(data, {[p[0]]:p[1]})
-            })
-            const musicId = data.musicId;
-            const obj = parseMusicBox(e);
-
-            musicdata[musicId] = obj;
+            var musicId = $(e).find("input[name=idx]")[0].getAttribute('value')
+            var obj = parseMusicBox(e)
+            musicdata[musicId] = obj
         })
-            return musicdata;
+        return musicdata
     }
+
+    var getPlayerScore = function() {
+        var musicDetail = []
+        var masterMusicData = []
+
+        token = $(document).find('input[name=token]')[0].getAttribute('value');
+        return Promise.resolve().then(function() {
+            return new Promise(function(resolve, reject) {
+                console.log("スコア取得中:[MASTER]"); 
+                setTimeout(function() { 
+                    _ajax(CHUNITHM_NET_GENRE_URL+"/sendMaster", "post", {genre:99, token:token}).then(function(data) {
+                        masterMusicData = parseMusicList(data)
+                        resolve()
+                    })
+                }, INTERVAL);
+            })
+        }).then(function() {
+            return new Promise(function(resolve, reject) {
+                console.log("スコア取得中:[EXPERT]"); 
+                setTimeout(function() { 
+                    _ajax(CHUNITHM_NET_GENRE_URL+"/sendExpert", "post", {genre:99, token:token}).then(function(data) {
+                        expertMusicData = parseMusicList(data)
+                        resolve()
+                    })
+                }, INTERVAL);
+            })
+        }).then(function() {
+            for(var musicId in masterMusicData) {
+                musicDataObj = {
+                    music_id: musicId,
+                    scoreData : {
+                        expert: expertMusicData[musicId],
+                        master: masterMusicData[musicId]
+                    }
+                }
+                musicDetail.push(musicDataObj)
+            }
+            return musicDetail
+        }).then(function(data) {
+            return data;
+        })
+    }
+
+    //
+    // ここまでChuniviewerから
+    //
     
     var parseFriendVsData = function(data) {
         const doc = $.parseHTML(data);
@@ -63,24 +120,36 @@
             const scores = $(val).find('.play_musicdata_highscore');
             const myscore = scores[0].textContent.replace(/,/g,"");
             const friendscore = scores[1].textContent.replace(/,/g,"");
-            const diff = difficultyToId(val.className.match(/(master|basic|advanced|expert)/)[0]);
+            const diff = getDifficultyId(val.className.match(/(master|basic|advanced|expert)/)[0]);
             musicData.push({ title: title, difficulty: diff, myscore: myscore, friendscore: friendscore});
         });
 
-        const names = $(doc).find('.friend_vs_name');
-        const myName = names[0].textContent;
-        const friendName = names[1].textContent;
-        return {data: musicData, myName: myName, friendName: friendName}
+        return musicData;
     }
 
-    // フレンドVSのデータを取得(レベル13,14)
+    // フレンドVSのデータを取得(レベル13,13+,14)
     var getFriendVsData = function(friendId){
+        //自分とフレンドの名前を取得
+        const names = $(document).find('.friend_vs_name');
+        const myName = names[0].textContent;
+        const friendName = names[1].textContent;
+        
+        token = $(document).find('input[name=token]')[0].getAttribute('value');
         return Promise.resolve().then(function() {
             return new Promise(function(resolve, reject) {
                 console.log("スコア取得中:[Level14]");
                 setTimeout(function(){
-                    _ajax(CHUNITHM_FRIENDVS_URL, "post", {level: "14", friend: friendId, friendvs: "friendvs"}).then(function(data) {
+                    _ajax(CHUNITHM_FRIENDVS_URL+"/sendBattleStart", "post", {level: "20", friend: friendId, friendvs: "friendvs", token: token}).then(function(data) {
                         friend14data = parseFriendVsData(data);
+                        resolve();
+                    })}, INTERVAL);
+            })
+        }).then(function () {
+            return new Promise(function(resolve, reject) {
+                console.log("スコア取得中:[Level13+]");
+                setTimeout(function(){
+                    _ajax(CHUNITHM_FRIENDVS_URL+"/sendBattleStart", "post", {level: "19", friend: friendId, friendvs: "friendvs", token: token}).then(function(data) {
+                        friend13plusdata = parseFriendVsData(data);
                         resolve();
                     })}, INTERVAL);
             })
@@ -88,70 +157,18 @@
             return new Promise(function(resolve, reject) {
                 console.log("スコア取得中:[Level13]");
                 setTimeout(function(){
-                    _ajax(CHUNITHM_FRIENDVS_URL, "post", {level: "13", friend: friendId, friendvs: "friendvs"}).then(function(data) {
+                    _ajax(CHUNITHM_FRIENDVS_URL+"/sendBattleStart", "post", {level: "18", friend: friendId, friendvs: "friendvs", token: token}).then(function(data) {
                         friend13data = parseFriendVsData(data);
                         resolve();
                     })}, INTERVAL);
             })
-        })// .then(function () {
-        //     return new Promise(function(resolve, reject) {
-        //         console.log("スコア取得中:[Level12]");
-        //         setTimeout(function(){
-        //             _ajax(CHUNITHM_FRIENDVS_URL, "post", {level: "12", friend: friendId, friendvs: "friendvs"}).then(function(data) {
-        //                 friend12data = parseFriendVsData(data);
-        //                 resolve();
-        //             })}, INTERVAL);
-        //     })
-        // })
-            .then(function(){
-            return { // 12: friend12data.data,
-                     13: friend13data.data, 14: friend14data.data, myName: friend14data.myName, friendName: friend14data.friendName };
+        }).then(function(){
+            return { "13": friend13data, "13plus": friend13plusdata, "14": friend14data, myName: myName, friendName: friendName };
         })
     }
+
+
     
-    const getPlayerScore = function() {
-        // 楽曲一覧
-        let musicDetail = [];
-        let masterMusicData = [];
-
-        return Promise.resolve().then(function() {
-            return new Promise(function(resolve, reject) {
-                console.log("スコア取得中:[MASTER]"); 
-                setTimeout(function() { 
-                    _ajax(CHUNITHM_NET_GENRE_URL, "post", {genre:99, level:"master", music_genre:"music_genre"}).then(function(data) {
-                        masterMusicData = parseMusicList(data);
-                        resolve();
-                    })
-                }, INTERVAL);
-            })
-        }).then(function() {
-            return new Promise(function(resolve, reject) {
-                console.log("スコア取得中:[EXPERT]"); 
-                setTimeout(function() { 
-                    _ajax(CHUNITHM_NET_GENRE_URL, "post", {genre:99, level:"expert", music_genre:"music_genre"}).then(function(data) {
-                        expertMusicData = parseMusicList(data);
-                        resolve();
-                    })
-                }, INTERVAL);
-            })
-        }).then(function() {
-            for(let musicId in masterMusicData) {
-                const musicDataObj = {
-                    music_id: musicId,
-                    scoreData : {
-                        expert: expertMusicData[musicId],
-                        master: masterMusicData[musicId]
-                    }
-                };
-                musicDetail.push(musicDataObj);
-            }
-            return musicDetail;
-        }).then(function(data) {
-            return data;
-        })
-    }
-    // ここまで参考: https://chuniviewer.net/js/getMusicScore.js
-
 
     // 単曲レート値の計算
     // http://www.atomic--age.net/information/chunithm/system#TOC--14
@@ -460,15 +477,15 @@
     }
 
     // フレンドと融合したベスト枠を計算
-    const calcBests = function(data, version) {
+    // isSynthesisがtrueの時は融合，そうでない時はフレンドのみのベスト枠を計算
+    const calcBests = function(data, version, isSynthesis) {
         let myScore = [];
         let friendScore = [];
 
         let myName = data.myName;
         let friendName = data.friendName;
 
-        for (let level of ["14", "13"// , "12"
-                          ]){
+        for (let level of ["14", "13plus", "13"]){
             for (let music of data[level]){
                 const c = getConstant(music.title, music.difficulty, version);
                 // 定数が0(難易度12未満)はスキップ
@@ -484,7 +501,7 @@
         const friendSorted = sortByRate(friendScore);
         const mybest = mySorted.slice(0, 30);
         const friendbest = friendSorted.slice(0, 30);
-        const synthesisBest = synthesis(mybest, friendbest);
+        const synthesisBest = isSynthesis ? synthesis(mybest, friendbest) : synthesis([], friendbest);
         const params = calcParams(synthesisBest);
 
         return [synthesisBest, params];
@@ -518,7 +535,7 @@
     // セレクトボックスと計算ボタンの作成
     const makeSelectUI = function() {
         let select = $("<select>").attr('id', 'select');
-        const versions = [["STARPLUS", "starplus"], ["STAR", "star"], ["AIRPLUS", "airplus"], ["AIR", "air"], ["無印PLUS", "plus"], ["無印", "origin"], ["13↑の下から", "special"]];
+        const versions = [["AMAZON", "amazon"],["STARPLUS", "starplus"], ["STAR", "star"], ["AIRPLUS", "airplus"], ["AIR", "air"], ["無印PLUS", "plus"], ["無印", "origin"], ["13↑の下から", "special"]];
         for (let i in versions) {
             select.append($("<option>").html(versions[i][0]).val(versions[i][1]));
         }
@@ -545,7 +562,7 @@
     const makeSynthesisButton = function(){
         let button = $("<button>").attr('id', 'synthesisButton');
 
-        button.html('計算！').on("click", () => {
+        button.html('フレンドとのベスト枠融合').on("click", () => {
             // 選択されているフレンド名
             const friendName = friendData.friendName;
             console.log("friend: " + friendName);
@@ -554,6 +571,27 @@
             let msg = friendName + "とのベスト枠融合！";
             try {
                 createHTML(synthesizedBest[0], synthesizedBest[1], DEFAULTVERSION, true, msg);
+            } catch (e) {
+                alert('「バトル開始」してから実行して下さい...');
+                return;
+            }
+            console.log('finished!!!');
+        });
+        button.appendTo("#main_menu");
+    }
+
+    const makeFriendBestButton = function(){
+        let button = $("<button>").attr('id', 'friendBestButton');
+
+        button.html('フレンドのベスト枠を計算').on("click", () => {
+            // 選択されているフレンド名
+            const friendName = friendData.friendName;
+            console.log("friend: " + friendName);
+            const friendBest = calcBests(friendData, DEFAULTVERSION);
+            console.log('constructing HTML...');
+            let msg = "フレンド" + friendName + "のベスト枠";
+            try {
+                createHTML(friendBest[0], friendBest[1], DEFAULTVERSION, false, msg);
             } catch (e) {
                 alert('「バトル開始」してから実行して下さい...');
                 return;
@@ -605,7 +643,7 @@
 
     const main = function() {
         const url = location.href;
-        if (url.indexOf('MusicGenre') >= 0){
+        if (url.indexOf('musicGenre') >= 0){
             makeSelectUI();
 
             Promise.resolve().then( () => {
@@ -623,22 +661,29 @@
                 $("#calcButton").prop("disabled", false);
             });
 
-        } else if (url.indexOf('FriendLevelVs') >= 0){
-            // 計算ボタンを作成
-            makeSynthesisButton();
+        } else if (url.indexOf('friend') >= 0){
+            //対象のフレンドとlevelでVSした後にのみ正しく起動
+
+            //計算ボタンを作成
+            //makeSynthesisButton();
+            //フレンドのベスト計算ボタンを作成
+            makeFriendBestButton();
 
             Promise.resolve().then( () => {
-                $("#synthesisButton").prop("disabled", true);
+                //$("#synthesisButton").prop("disabled", true);
+                $("#friendBestButton").prop("disabled", true);
             }).then( () => {
                 const friendId = $('[name=friend]').val();
                 return getFriendVsData(friendId);
             }).then(function(data){
                 console.log('finished scraping data!');
+                console.log(data);
                 friendData = data;
                 //makeSampleData();
                 return Promise.resolve();
             }).then( () => {
-                $("#synthesisButton").prop("disabled", false);
+                //$("#synthesisButton").prop("disabled", false);
+                $("#friendBestButton").prop("disabled", false);
             });
 
         } else {
