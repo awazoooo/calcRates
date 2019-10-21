@@ -1,11 +1,9 @@
 (function() {
   const CHUNITHM_NET_GENRE_URL =
     "https://chunithm-net.com/mobile/record/musicGenre";
-  // const CHUNITHM_FRIENDVS_URL = "https://chunithm-net.com/mobile/friend/levelVs";
   const INTERVAL = 3000;
   const DEFAULTVERSION = "amazon"; // current version
   const TOOLNAME = "旧バージョン時点のレート計算";
-  // const TOOLNAME_FRIEND = 'フレンドベスト枠計算';
 
   Node.prototype.prependChild = function(e) {
     this.insertBefore(e, this.firstChild);
@@ -121,96 +119,6 @@
       .then(data => data);
   };
 
-  const parseFriendVsData = data => {
-    const doc = $.parseHTML(data);
-    const mb = $(doc).find(".music_box");
-    let musicData = [];
-    mb.each((idx, val) => {
-      const title = $(val).find(".block_underline")[0].textContent;
-      const scores = $(val).find(".play_musicdata_highscore");
-      const myscore = scores[0].textContent.replace(/,/g, "");
-      const friendscore = scores[1].textContent.replace(/,/g, "");
-      const diff = getDifficultyId(
-        val.className.match(/master|basic|advanced|expert/)[0]
-      );
-      musicData.push({
-        title: title,
-        difficulty: diff,
-        myscore: myscore,
-        friendscore: friendscore
-      });
-    });
-
-    return musicData;
-  };
-
-  // フレンドVSのデータを取得(レベル13,13+,14)
-  // const getFriendVsData = friendId => {
-  //   //自分とフレンドの名前を取得
-  //   const names = $(document).find(".friend_vs_name");
-  //   const myName = names[0].textContent;
-  //   const friendName = names[1].textContent;
-
-  //   const token = $(document)
-  //     .find("input[name=token]")[0]
-  //     .getAttribute("value");
-  //   return Promise.resolve()
-  //     .then(() => {
-  //       return new Promise((resolve, reject) => {
-  //         console.log("スコア取得中:[Level14]");
-  //         setTimeout(() => {
-  //           _ajax(CHUNITHM_FRIENDVS_URL + "/sendBattleStart", "post", {
-  //             level: "20",
-  //             friend: friendId,
-  //             token: token
-  //           }).then(data => {
-  //             friend14data = parseFriendVsData(data);
-  //             resolve();
-  //           });
-  //         }, INTERVAL);
-  //       });
-  //     })
-  //     .then(() => {
-  //       return new Promise((resolve, reject) => {
-  //         console.log("スコア取得中:[Level13+]");
-  //         setTimeout(() => {
-  //           _ajax(CHUNITHM_FRIENDVS_URL + "/sendBattleStart", "post", {
-  //             level: "19",
-  //             friend: friendId,
-  //             token: token
-  //           }).then(data => {
-  //             friend13plusdata = parseFriendVsData(data);
-  //             resolve();
-  //           });
-  //         }, INTERVAL);
-  //       });
-  //     })
-  //     .then(() => {
-  //       return new Promise((resolve, reject) => {
-  //         console.log("スコア取得中:[Level13]");
-  //         setTimeout(() => {
-  //           _ajax(CHUNITHM_FRIENDVS_URL + "/sendBattleStart", "post", {
-  //             level: "18",
-  //             friend: friendId,
-  //             token: token
-  //           }).then(data => {
-  //             friend13data = parseFriendVsData(data);
-  //             resolve();
-  //           });
-  //         }, INTERVAL);
-  //       });
-  //     })
-  //     .then(() => {
-  //       return {
-  //         "13": friend13data,
-  //         "13plus": friend13plusdata,
-  //         "14": friend14data,
-  //         myName: myName,
-  //         friendName: friendName
-  //       };
-  //     });
-  // };
-
   // 単曲レート値の計算
   // http://www.atomic--age.net/information/chunithm/system#TOC--14
 
@@ -247,8 +155,7 @@
     const c = constantTable.filter(
       e => e.title == title && e.difficulty == diff
     );
-    if (c.length == 0)
-      return 0.0;
+    if (c.length == 0) return 0.0;
     return c[0].constant[version] || 0.0;
   };
 
@@ -325,7 +232,7 @@
     return d;
   };
 
-  const createMusicBox = (musicName, diff, scoreNum, mrate, c, ownerData) => {
+  const createMusicBox = (musicName, diff, scoreNum, mrate, c) => {
     // CONSTANT部分のelement
     let result = document.createElement("div");
     result.classList.add("play_musicdata_highscore");
@@ -354,18 +261,6 @@
     rate.appendChild(rateb);
 
     result.appendChild(rate);
-
-    if (ownerData.isFriend) {
-      // OWNER部分のelement
-      let own = document.createElement("div");
-      own.textContent = "OWNER: ";
-      let ownb = document.createElement("span");
-      ownb.classList.add("text_b");
-      ownb.textContent = ownerData.owner;
-      own.appendChild(ownb);
-
-      result.appendChild(own);
-    }
 
     // music title
     let title = document.createElement("div");
@@ -417,8 +312,7 @@
   };
 
   // HTMLを書き換える
-  // 4つ目はFriendVSの時にtrue
-  const createHTML = (data, params, version, isFriend, twiAddMsg) => {
+  const createHTML = (data, params, version, twiAddMsg) => {
     let src = document.getElementsByClassName("box01 w420");
 
     // ベスト枠
@@ -437,25 +331,13 @@
     for (let item of data) {
       if (item.score == null) break;
       let m;
-      if (isFriend) {
-        m = createMusicBox(
-          item.title,
-          item.difficulty,
-          item.score,
-          item.rate,
-          item.constant,
-          { isFriend: isFriend, owner: item.owner }
-        );
-      } else {
-        m = createMusicBox(
-          item.title,
-          item.difficulty,
-          item.score,
-          item.rate,
-          item.constant,
-          { isFriend: isFriend }
-        );
-      }
+      m = createMusicBox(
+        item.title,
+        item.difficulty,
+        item.score,
+        item.rate,
+        item.constant
+      );
       best_title.appendChild(m);
     }
 
@@ -472,11 +354,7 @@
 
     let box01_title = document.createElement("div");
     box01_title.classList.add("box01_title");
-    if (isFriend) {
-      box01_title.textContent = TOOLNAME_FRIEND;
-    } else {
-      box01_title.textContent = TOOLNAME;
-    }
+    box01_title.textContent = TOOLNAME;
     src[0].prependChild(box01_title);
   };
 
@@ -522,7 +400,6 @@
     }
 
     const sorted = sortByRate(musicarr);
-    console.log(sorted);
     const best = worst
       ? sorted
           .reverse()
@@ -533,78 +410,6 @@
 
     return [best, params];
   };
-
-  // musicがmusicListに含まれるかどうか
-  // 実際に判定するのは曲名と難易度が等しいかどうか
-  // const member = (musicList, music) =>
-  //   musicList.filter(
-  //     m => m.title == music.title && m.difficulty == music.difficulty
-  //   ).length != 0;
-
-  // 自分とフレンドのベスト枠を融合して返す
-  // const synthesis = (myScore, friendScore) => {
-  //   let best = [].concat(myScore, friendScore).filter(x => x.title != "");
-  //   const sorted = sortByRate(best);
-
-  //   let exists = [];
-  //   let synthesis = [];
-
-  //   for (let m of sorted) {
-  //     if (member(exists, m)) continue;
-
-  //     exists.push(m);
-  //     synthesis.push(m);
-  //   }
-
-  //   return synthesis.slice(0, 30);
-  // };
-
-  // フレンドと融合したベスト枠を計算
-  // isSynthesisがtrueの時は融合，そうでない時はフレンドのみのベスト枠を計算
-  // const calcBests = (data, version, isSynthesis) => {
-  //   let myScore = [];
-  //   let friendScore = [];
-
-  //   let myName = data.myName;
-  //   let friendName = data.friendName;
-
-  //   for (let level of ["14", "13plus", "13"]) {
-  //     for (let music of data[level]) {
-  //       const c = getConstant(music.title, music.difficulty, version);
-  //       // 定数が0(難易度12未満)はスキップ
-  //       if (c == 0) continue;
-  //       const myrate = round2(calcRate(c, music.myscore));
-  //       const friendrate = round2(calcRate(c, music.friendscore));
-  //       myScore.push({
-  //         title: music.title,
-  //         difficulty: idToDifficulty(music.difficulty),
-  //         constant: c,
-  //         score: music.myscore,
-  //         rate: myrate,
-  //         owner: myName
-  //       });
-  //       friendScore.push({
-  //         title: music.title,
-  //         difficulty: idToDifficulty(music.difficulty),
-  //         constant: c,
-  //         score: music.friendscore,
-  //         rate: friendrate,
-  //         owner: friendName
-  //       });
-  //     }
-  //   }
-
-  //   const mySorted = sortByRate(myScore);
-  //   const friendSorted = sortByRate(friendScore);
-  //   const mybest = mySorted.slice(0, 30);
-  //   const friendbest = friendSorted.slice(0, 30);
-  //   const synthesisBest = isSynthesis
-  //     ? synthesis(mybest, friendbest)
-  //     : synthesis([], friendbest);
-  //   const params = calcParams(synthesisBest);
-
-  //   return [synthesisBest, params];
-  // };
 
   // 定数表の出力(for debug)
   const printTable = table => {
@@ -627,9 +432,6 @@
 
   // 取得したスコアデータ
   let scoreData;
-
-  // フレンドと自分のスコアデータ
-//  let friendData;
 
   // セレクトボックスと計算ボタンの作成
   const makeSelectUI = () => {
@@ -658,119 +460,17 @@
       const selectedVersion = $("[id=select]").val();
       const data = calcBestOfVersion(scoreData, selectedVersion);
       console.log("constructing HTML...");
-//      try {
+      try {
         createHTML(data[0], data[1], selectedVersion, false, "");
-//      } catch (e) {
-//        alert("「MASTER」を選択してから実行してください...");
-//        return;
-//      }
+      } catch (e) {
+        alert("「MASTER」を選択してから実行してください...");
+        return;
+      }
       console.log("finished!!!");
     });
 
     select.appendTo("#main_menu");
     button.appendTo("#main_menu");
-  };
-
-  // const makeSynthesisButton = () => {
-  //   let button = $("<button>").attr("id", "synthesisButton");
-
-  //   button.html("フレンドとのベスト枠融合").on("click", () => {
-  //     // 選択されているフレンド名
-  //     const friendName = friendData.friendName;
-  //     console.log("friend: " + friendName);
-  //     const synthesizedBest = calcBests(friendData, DEFAULTVERSION);
-  //     console.log("constructing HTML...");
-  //     let msg = friendName + "とのベスト枠融合！";
-  //     try {
-  //       createHTML(
-  //         synthesizedBest[0],
-  //         synthesizedBest[1],
-  //         DEFAULTVERSION,
-  //         true,
-  //         msg
-  //       );
-  //     } catch (e) {
-  //       alert("「バトル開始」してから実行して下さい...");
-  //       return;
-  //     }
-  //     console.log("finished!!!");
-  //   });
-  //   button.appendTo("#main_menu");
-  // };
-
-  // const makeFriendBestButton = () => {
-  //   let button = $("<button>").attr("id", "friendBestButton");
-
-  //   button.html("フレンドのベスト枠を計算").on("click", () => {
-  //     // 選択されているフレンド名
-  //     const friendName = friendData.friendName;
-  //     console.log("friend: " + friendName);
-  //     const friendBest = calcBests(friendData, DEFAULTVERSION);
-  //     console.log("constructing HTML...");
-  //     let msg = "フレンド" + friendName + "のベスト枠";
-  //     try {
-  //       createHTML(friendBest[0], friendBest[1], DEFAULTVERSION, false, msg);
-  //     } catch (e) {
-  //       alert("「バトル開始」してから実行して下さい...");
-  //       return;
-  //     }
-  //     console.log("finished!!!");
-  //   });
-  //   button.appendTo("#main_menu");
-  // };
-
-  // for util
-  const printList = l => {
-    let output = "[\n";
-    for (let e of l) {
-      output += e;
-      output += "\n";
-    }
-    output += "]";
-    console.log(output);
-  };
-
-  // make sample data
-  const makeSampleData = () => {
-    const oddList = [13.1, 13.3, 13.5, 13.7, 13.9];
-    const evenList = [13, 13.2, 13.4, 13.6, 13.8];
-
-    const v = DEFAULTVERSION;
-
-    const sample1 = getMusicsByLevel(v, oddList);
-    const sample2 = getMusicsByLevel(v, evenList);
-
-    let score1 = [];
-    for (let m of sample1)
-      score1.push({
-        title: m.title,
-        difficulty: idToDifficulty(m.difficulty),
-        constant: m.constant[v],
-        score: 1008000,
-        rate: m.constant[v] + 2,
-        owner: "ゴリラ1"
-      });
-
-    let score2 = [];
-    for (let m of sample2)
-      score1.push({
-        title: m.title,
-        difficulty: idToDifficulty(m.difficulty),
-        constant: m.constant[v],
-        score: 1008000,
-        rate: m.constant[v] + 2,
-        owner: "ゴリラ2"
-      });
-
-    const mySorted = sortByRate(score1);
-    const friendSorted = sortByRate(score2);
-    const mybest = mySorted.slice(0, 30);
-    const friendbest = friendSorted.slice(0, 30);
-    const synthesisBest = synthesis(mybest, friendbest);
-    const params = calcParams(synthesisBest);
-
-    const msg = "ゴリラ2とのベスト枠融合！\n";
-    createHTML(synthesisBest, params, DEFAULTVERSION, true, msg);
   };
 
   const main = () => {
@@ -796,30 +496,7 @@
           // ボタンをenabled
           $("#calcButton").prop("disabled", false);
         });
-    } // else if (url.indexOf("friend") >= 0) {
-    //   //対象のフレンドとlevelでVSした後にのみ正しく起動
-    //   //フレンドのベスト計算ボタンを作成
-    //   makeFriendBestButton();
-
-    //   Promise.resolve()
-    //     .then(() => {
-    //       $("#friendBestButton").prop("disabled", true);
-    //     })
-    //     .then(() => {
-    //       const friendId = $("[name=friend]").val();
-    //       return getFriendVsData(friendId);
-    //     })
-    //     .then(data => {
-    //       console.log("finished scraping data!");
-    //       friendData = data;
-    //       //makeSampleData();
-    //       return Promise.resolve();
-    //     })
-    //     .then(() => {
-    //       $("#friendBestButton").prop("disabled", false);
-    //     });
-    // }
-    else {
+    } else {
       alert(
         "「楽曲別レコード」のページで「MASTER」を選択してから実行してください..."
       );
