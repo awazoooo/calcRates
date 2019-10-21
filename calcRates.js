@@ -460,7 +460,7 @@
       const data = calcBestOfVersion(scoreData, selectedVersion);
       console.log("constructing HTML...");
       try {
-        createHTML(data[0], data[1], selectedVersion, false, "");
+        createHTML(data[0], data[1], selectedVersion, "");
       } catch (e) {
         alert("「MASTER」を選択してから実行してください...");
         return;
