@@ -2,7 +2,7 @@
   const CHUNITHM_NET_GENRE_URL =
     "https://chunithm-net.com/mobile/record/musicGenre";
   const INTERVAL = 3000;
-  const DEFAULTVERSION = "amazon"; // current version
+  const DEFAULTVERSION = "starplus"; // current version
   const TOOLNAME = "旧バージョン時点のレート計算";
 
   Node.prototype.prependChild = function(e) {
@@ -437,7 +437,6 @@
   const makeSelectUI = () => {
     let select = $("<select>").attr("id", "select");
     const versions = [
-      ["AMAZON", "amazon"],
       ["STARPLUS", "starplus"],
       ["STAR", "star"],
       ["AIRPLUS", "airplus"],

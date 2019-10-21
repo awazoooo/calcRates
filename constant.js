@@ -5,322 +5,9 @@
 // 11/8追加曲更新
 const constantTable = [
   {
-    title: "POP TEAM EPIC",
-    difficulty: 3,
-    constant: {
-      amazon: 12,
-      starplus: 0,
-      star: 0,
-      airplus: 0,
-      air: 0,
-      plus: 0,
-      origin: 0
-    }
-  },
-  {
-    title: "Brain Power",
-    difficulty: 3,
-    constant: {
-      amazon: 13.3,
-      starplus: 0,
-      star: 0,
-      airplus: 0,
-      air: 0,
-      plus: 0,
-      origin: 0
-    }
-  },
-  {
-    title: "ouroboros -twin stroke of the end-",
-    difficulty: 3,
-    constant: {
-      amazon: 13.6,
-      starplus: 0,
-      star: 0,
-      airplus: 0,
-      air: 0,
-      plus: 0,
-      origin: 0
-    }
-  },
-  {
-    title: "GERBERA",
-    difficulty: 3,
-    constant: {
-      amazon: 13.6,
-      starplus: 0,
-      star: 0,
-      airplus: 0,
-      air: 0,
-      plus: 0,
-      origin: 0
-    }
-  },
-  {
-    title: "Taiko Drum Monster",
-    difficulty: 3,
-    constant: {
-      amazon: 13.4,
-      starplus: 0,
-      star: 0,
-      airplus: 0,
-      air: 0,
-      plus: 0,
-      origin: 0
-    }
-  },
-  {
-    title: "PAST",
-    difficulty: 3,
-    constant: {
-      amazon: 12.5,
-      starplus: 0,
-      star: 0,
-      airplus: 0,
-      air: 0,
-      plus: 0,
-      origin: 0
-    }
-  },
-  {
-    title: "Blessed",
-    difficulty: 3,
-    constant: {
-      amazon: 12.7,
-      starplus: 0,
-      star: 0,
-      airplus: 0,
-      air: 0,
-      plus: 0,
-      origin: 0
-    }
-  },
-  {
-    title: "足立オウフwwww",
-    difficulty: 3,
-    constant: {
-      amazon: 13,
-      starplus: 0,
-      star: 0,
-      airplus: 0,
-      air: 0,
-      plus: 0,
-      origin: 0
-    }
-  },
-  {
-    title: "Seagull",
-    difficulty: 3,
-    constant: {
-      amazon: 12.5,
-      starplus: 0,
-      star: 0,
-      airplus: 0,
-      air: 0,
-      plus: 0,
-      origin: 0
-    }
-  },
-  {
-    title: "Blaster Heaven",
-    difficulty: 3,
-    constant: {
-      amazon: 12.1,
-      starplus: 0,
-      star: 0,
-      airplus: 0,
-      air: 0,
-      plus: 0,
-      origin: 0
-    }
-  },
-  {
-    title: "ハートアタック",
-    difficulty: 3,
-    constant: {
-      amazon: 13.4,
-      starplus: 0,
-      star: 0,
-      airplus: 0,
-      air: 0,
-      plus: 0,
-      origin: 0
-    }
-  },
-  {
-    title: "Summer is over",
-    difficulty: 3,
-    constant: {
-      amazon: 12.8,
-      starplus: 0,
-      star: 0,
-      airplus: 0,
-      air: 0,
-      plus: 0,
-      origin: 0
-    }
-  },
-  {
-    title: "folern",
-    difficulty: 2,
-    constant: {
-      amazon: 12.5,
-      starplus: 0,
-      star: 0,
-      airplus: 0,
-      air: 0,
-      plus: 0,
-      origin: 0
-    }
-  },
-  {
-    title: "folern",
-    difficulty: 3,
-    constant: {
-      amazon: 13.7,
-      starplus: 0,
-      star: 0,
-      airplus: 0,
-      air: 0,
-      plus: 0,
-      origin: 0
-    }
-  },
-  {
-    title: "larva",
-    difficulty: 2,
-    constant: {
-      amazon: 12,
-      starplus: 0,
-      star: 0,
-      airplus: 0,
-      air: 0,
-      plus: 0,
-      origin: 0
-    }
-  },
-  {
-    title: "larva",
-    difficulty: 3,
-    constant: {
-      amazon: 13.8,
-      starplus: 0,
-      star: 0,
-      airplus: 0,
-      air: 0,
-      plus: 0,
-      origin: 0
-    }
-  },
-  {
-    title: "ロキ",
-    difficulty: 3,
-    constant: {
-      amazon: 12,
-      starplus: 0,
-      star: 0,
-      airplus: 0,
-      air: 0,
-      plus: 0,
-      origin: 0
-    }
-  },
-  {
-    title: "2DVenture",
-    difficulty: 3,
-    constant: {
-      amazon: 12.7,
-      starplus: 0,
-      star: 0,
-      airplus: 0,
-      air: 0,
-      plus: 0,
-      origin: 0
-    }
-  },
-  {
-    title: "ぜったい！昇天★鎮魂歌♂",
-    difficulty: 3,
-    constant: {
-      amazon: 13.5,
-      starplus: 0,
-      star: 0,
-      airplus: 0,
-      air: 0,
-      plus: 0,
-      origin: 0
-    }
-  },
-  {
-    title: "夕焼けのRed Parade",
-    difficulty: 2,
-    constant: {
-      amazon: 12.3,
-      starplus: 0,
-      star: 0,
-      airplus: 0,
-      air: 0,
-      plus: 0,
-      origin: 0
-    }
-  },
-  {
-    title: "夕焼けのRed Parade",
-    difficulty: 3,
-    constant: {
-      amazon: 13.8,
-      starplus: 0,
-      star: 0,
-      airplus: 0,
-      air: 0,
-      plus: 0,
-      origin: 0
-    }
-  },
-  {
-    title: "StufeStern",
-    difficulty: 3,
-    constant: {
-      amazon: 13.4,
-      starplus: 0,
-      star: 0,
-      airplus: 0,
-      air: 0,
-      plus: 0,
-      origin: 0
-    }
-  },
-  {
-    title: "スピカの天秤",
-    difficulty: 2,
-    constant: {
-      amazon: 12.1,
-      starplus: 0,
-      star: 0,
-      airplus: 0,
-      air: 0,
-      plus: 0,
-      origin: 0
-    }
-  },
-  {
-    title: "スピカの天秤",
-    difficulty: 3,
-    constant: {
-      amazon: 13.8,
-      starplus: 0,
-      star: 0,
-      airplus: 0,
-      air: 0,
-      plus: 0,
-      origin: 0
-    }
-  },
-  {
     title: "チルノおかんのさいきょう☆バイブスごはん",
     difficulty: 3,
     constant: {
-      amazon: 12.6,
       starplus: 12.6,
       star: 0,
       airplus: 0,
@@ -333,7 +20,6 @@ const constantTable = [
     title: "つるぺったん",
     difficulty: 3,
     constant: {
-      amazon: 12.4,
       starplus: 12.4,
       star: 0,
       airplus: 0,
@@ -346,7 +32,6 @@ const constantTable = [
     title: "volcanic",
     difficulty: 3,
     constant: {
-      amazon: 13.5,
       starplus: 13.5,
       star: 0,
       airplus: 0,
@@ -359,7 +44,6 @@ const constantTable = [
     title: "volcanic",
     difficulty: 2,
     constant: {
-      amazon: 12.4,
       starplus: 12.4,
       star: 0,
       airplus: 0,
@@ -372,7 +56,6 @@ const constantTable = [
     title: "メニメニマニマニ",
     difficulty: 3,
     constant: {
-      amazon: 12.3,
       starplus: 12.3,
       star: 0,
       airplus: 0,
@@ -385,7 +68,6 @@ const constantTable = [
     title: "灼熱スイッチ",
     difficulty: 3,
     constant: {
-      amazon: 12.1,
       starplus: 12.1,
       star: 0,
       airplus: 0,
@@ -398,7 +80,6 @@ const constantTable = [
     title: "Change Our MIRAI！ (Our 7 Lights)",
     difficulty: 3,
     constant: {
-      amazon: 12.5,
       starplus: 12.5,
       star: 0,
       airplus: 0,
@@ -411,7 +92,6 @@ const constantTable = [
     title: "Dual Fractal",
     difficulty: 3,
     constant: {
-      amazon: 12.8,
       starplus: 12.8,
       star: 0,
       airplus: 0,
@@ -424,7 +104,6 @@ const constantTable = [
     title: "Drivessover",
     difficulty: 3,
     constant: {
-      amazon: 12.8,
       starplus: 12.8,
       star: 0,
       airplus: 0,
@@ -437,7 +116,6 @@ const constantTable = [
     title: "Surveiller et punir",
     difficulty: 3,
     constant: {
-      amazon: 13.9,
       starplus: 13.9,
       star: 0,
       airplus: 0,
@@ -450,7 +128,6 @@ const constantTable = [
     title: "macrocosmos",
     difficulty: 3,
     constant: {
-      amazon: 14,
       starplus: 14,
       star: 0,
       airplus: 0,
@@ -463,7 +140,6 @@ const constantTable = [
     title: "業 -善なる神とこの世の悪について-",
     difficulty: 3,
     constant: {
-      amazon: 14.1,
       starplus: 14.1,
       star: 0,
       airplus: 0,
@@ -476,7 +152,6 @@ const constantTable = [
     title: "あ・え・い・う・え・お・あお!!",
     difficulty: 3,
     constant: {
-      amazon: 12.4,
       starplus: 12.4,
       star: 0,
       airplus: 0,
@@ -489,7 +164,6 @@ const constantTable = [
     title: "Los! Los! Los!",
     difficulty: 3,
     constant: {
-      amazon: 12.3,
       starplus: 12.3,
       star: 0,
       airplus: 0,
@@ -502,7 +176,6 @@ const constantTable = [
     title: "Uncontrollable",
     difficulty: 3,
     constant: {
-      amazon: 12.4,
       starplus: 12.4,
       star: 0,
       airplus: 0,
@@ -515,7 +188,6 @@ const constantTable = [
     title: "碧き孤島のアングゥィス",
     difficulty: 3,
     constant: {
-      amazon: 12.8,
       starplus: 12.8,
       star: 0,
       airplus: 0,
@@ -528,7 +200,6 @@ const constantTable = [
     title: "初音ミクの激唱",
     difficulty: 2,
     constant: {
-      amazon: 12.4,
       starplus: 12.4,
       star: 0,
       airplus: 0,
@@ -541,7 +212,6 @@ const constantTable = [
     title: "初音ミクの激唱",
     difficulty: 3,
     constant: {
-      amazon: 13.7,
       starplus: 13.7,
       star: 0,
       airplus: 0,
@@ -554,7 +224,6 @@ const constantTable = [
     title: "ヒビカセ",
     difficulty: 3,
     constant: {
-      amazon: 12.5,
       starplus: 12.5,
       star: 0,
       airplus: 0,
@@ -567,7 +236,6 @@ const constantTable = [
     title: "Scream out! -CHUNITHM Tuning-",
     difficulty: 3,
     constant: {
-      amazon: 12.4,
       starplus: 12.4,
       star: 0,
       airplus: 0,
@@ -580,7 +248,6 @@ const constantTable = [
     title: "Spring of Dreams",
     difficulty: 3,
     constant: {
-      amazon: 12.2,
       starplus: 12.7,
       star: 0,
       airplus: 0,
@@ -593,7 +260,6 @@ const constantTable = [
     title: "Floating Darkness",
     difficulty: 3,
     constant: {
-      amazon: 12.7,
       starplus: 12.2,
       star: 0,
       airplus: 0,
@@ -606,7 +272,6 @@ const constantTable = [
     title: "Candyland Symphony",
     difficulty: 3,
     constant: {
-      amazon: 12.4,
       starplus: 12.4,
       star: 0,
       airplus: 0,
@@ -619,7 +284,6 @@ const constantTable = [
     title: "ここで一席！　Oshama Scramble!",
     difficulty: 3,
     constant: {
-      amazon: 12.5,
       starplus: 12.5,
       star: 0,
       airplus: 0,
@@ -632,7 +296,6 @@ const constantTable = [
     title: "咲キ誇レ常世ノ華",
     difficulty: 3,
     constant: {
-      amazon: 12.4,
       starplus: 12.4,
       star: 0,
       airplus: 0,
@@ -645,7 +308,6 @@ const constantTable = [
     title: "The wheel to the Night ～インド人が夢に!?～",
     difficulty: 3,
     constant: {
-      amazon: 13,
       starplus: 12.9,
       star: 0,
       airplus: 0,
@@ -658,7 +320,6 @@ const constantTable = [
     title: "管弦楽組曲 第3番 ニ長調「第2曲（G線上のアリア）」BWV.1068-2",
     difficulty: 3,
     constant: {
-      amazon: 13.5,
       starplus: 13.5,
       star: 0,
       airplus: 0,
@@ -671,7 +332,6 @@ const constantTable = [
     title: "厨病激発ボーイ",
     difficulty: 3,
     constant: {
-      amazon: 12.5,
       starplus: 12.5,
       star: 0,
       airplus: 0,
@@ -684,7 +344,6 @@ const constantTable = [
     title: "放課後ストライド",
     difficulty: 3,
     constant: {
-      amazon: 12.1,
       starplus: 12.1,
       star: 0,
       airplus: 0,
@@ -697,7 +356,6 @@ const constantTable = [
     title: "StargazeR",
     difficulty: 3,
     constant: {
-      amazon: 12.2,
       starplus: 12.2,
       star: 0,
       airplus: 0,
@@ -710,7 +368,6 @@ const constantTable = [
     title: "ゴーストルール",
     difficulty: 3,
     constant: {
-      amazon: 12.7,
       starplus: 12.7,
       star: 0,
       airplus: 0,
@@ -723,7 +380,6 @@ const constantTable = [
     title: "頓珍漢の宴",
     difficulty: 3,
     constant: {
-      amazon: 13,
       starplus: 13,
       star: 0,
       airplus: 0,
@@ -736,7 +392,6 @@ const constantTable = [
     title: "ぶれいくるみるくらぶ！",
     difficulty: 3,
     constant: {
-      amazon: 12.4,
       starplus: 12.4,
       star: 0,
       airplus: 0,
@@ -749,7 +404,6 @@ const constantTable = [
     title: "クレッシェンド・ストーリー",
     difficulty: 3,
     constant: {
-      amazon: 12.4,
       starplus: 12.4,
       star: 0,
       airplus: 0,
@@ -762,7 +416,6 @@ const constantTable = [
     title: "NYAN-NYA, More! ラブシャイン、Chu♥",
     difficulty: 3,
     constant: {
-      amazon: 12.6,
       starplus: 12.6,
       star: 0,
       airplus: 0,
@@ -775,7 +428,6 @@ const constantTable = [
     title: "ラブって♡ジュエリー♪えんじぇる☆ブレイク！！",
     difficulty: 3,
     constant: {
-      amazon: 12.6,
       starplus: 12.7,
       star: 0,
       airplus: 0,
@@ -788,7 +440,6 @@ const constantTable = [
     title: "サンシャインサマー☆夏期講習",
     difficulty: 3,
     constant: {
-      amazon: 12.9,
       starplus: 12.9,
       star: 0,
       airplus: 0,
@@ -801,7 +452,6 @@ const constantTable = [
     title: "楔",
     difficulty: 3,
     constant: {
-      amazon: 12.4,
       starplus: 12.4,
       star: 0,
       airplus: 0,
@@ -814,7 +464,6 @@ const constantTable = [
     title: "SEVENTH HAVEN",
     difficulty: 3,
     constant: {
-      amazon: 12.1,
       starplus: 12.1,
       star: 0,
       airplus: 0,
@@ -827,7 +476,6 @@ const constantTable = [
     title: "ゴーゴー幽霊船",
     difficulty: 3,
     constant: {
-      amazon: 12.5,
       starplus: 12.5,
       star: 0,
       airplus: 0,
@@ -840,7 +488,6 @@ const constantTable = [
     title: "マトリョシカ",
     difficulty: 3,
     constant: {
-      amazon: 12.2,
       starplus: 12.2,
       star: 0,
       airplus: 0,
@@ -853,7 +500,6 @@ const constantTable = [
     title: "La Flesvelka",
     difficulty: 3,
     constant: {
-      amazon: 12.5,
       starplus: 12.5,
       star: 0,
       airplus: 0,
@@ -866,7 +512,6 @@ const constantTable = [
     title: "ドーナツホール",
     difficulty: 3,
     constant: {
-      amazon: 12.7,
       starplus: 12.7,
       star: 0,
       airplus: 0,
@@ -879,7 +524,6 @@ const constantTable = [
     title: "AVALON",
     difficulty: 3,
     constant: {
-      amazon: 13.5,
       starplus: 13.5,
       star: 0,
       airplus: 0,
@@ -892,7 +536,6 @@ const constantTable = [
     title: "イロドリミドリ杯花映塚全一決定戦公式テーマソング『ウソテイ』",
     difficulty: 3,
     constant: {
-      amazon: 12.3,
       starplus: 12.3,
       star: 0,
       airplus: 0,
@@ -905,7 +548,6 @@ const constantTable = [
     title: "物凄い勢いでけーねが物凄いうた",
     difficulty: 3,
     constant: {
-      amazon: 12.2,
       starplus: 12.4,
       star: 0,
       airplus: 0,
@@ -918,7 +560,6 @@ const constantTable = [
     title: "WARNING×WARNING×WARNING",
     difficulty: 3,
     constant: {
-      amazon: 12.4,
       starplus: 12.2,
       star: 0,
       airplus: 0,
@@ -931,7 +572,6 @@ const constantTable = [
     title: "きゅうりバーにダイブ",
     difficulty: 3,
     constant: {
-      amazon: 13.4,
       starplus: 13.3,
       star: 0,
       airplus: 0,
@@ -944,7 +584,6 @@ const constantTable = [
     title: "サドマミホリック",
     difficulty: 3,
     constant: {
-      amazon: 13.2,
       starplus: 13.3,
       star: 0,
       airplus: 0,
@@ -957,7 +596,6 @@ const constantTable = [
     title: "ねぇ、壊れタ人形ハ何処へ棄テらレるノ？",
     difficulty: 2,
     constant: {
-      amazon: 12.4,
       starplus: 12.4,
       star: 0,
       airplus: 0,
@@ -970,7 +608,6 @@ const constantTable = [
     title: "ねぇ、壊れタ人形ハ何処へ棄テらレるノ？",
     difficulty: 3,
     constant: {
-      amazon: 13.8,
       starplus: 13.8,
       star: 0,
       airplus: 0,
@@ -983,7 +620,6 @@ const constantTable = [
     title: "Very! Merry!! Session!!!",
     difficulty: 3,
     constant: {
-      amazon: 12.3,
       starplus: 12.3,
       star: 0,
       airplus: 0,
@@ -996,7 +632,6 @@ const constantTable = [
     title: "Pastel Party",
     difficulty: 3,
     constant: {
-      amazon: 12.9,
       starplus: 12.9,
       star: 0,
       airplus: 0,
@@ -1009,7 +644,6 @@ const constantTable = [
     title: "はちみつアドベンチャー",
     difficulty: 3,
     constant: {
-      amazon: 12.4,
       starplus: 12.4,
       star: 0,
       airplus: 0,
@@ -1022,7 +656,6 @@ const constantTable = [
     title: "CHOCOLATE BOMB!!!!",
     difficulty: 3,
     constant: {
-      amazon: 13.3,
       starplus: 13.4,
       star: 0,
       airplus: 0,
@@ -1035,7 +668,6 @@ const constantTable = [
     title: "Twilight",
     difficulty: 3,
     constant: {
-      amazon: 13.5,
       starplus: 13.6,
       star: 0,
       airplus: 0,
@@ -1048,7 +680,6 @@ const constantTable = [
     title: "純情-SAKURA-",
     difficulty: 3,
     constant: {
-      amazon: 12.5,
       starplus: 12.4,
       star: 0,
       airplus: 0,
@@ -1061,7 +692,6 @@ const constantTable = [
     title: "青春サイダー",
     difficulty: 3,
     constant: {
-      amazon: 12.5,
       starplus: 12.5,
       star: 0,
       airplus: 0,
@@ -1074,7 +704,6 @@ const constantTable = [
     title: "ゆけむり魂温泉 II",
     difficulty: 3,
     constant: {
-      amazon: 12.2,
       starplus: 12.2,
       star: 0,
       airplus: 0,
@@ -1087,7 +716,6 @@ const constantTable = [
     title: "ナイト・オブ・ナイツ",
     difficulty: 3,
     constant: {
-      amazon: 11.9,
       starplus: 0,
       star: 0,
       airplus: 0,
@@ -1100,7 +728,6 @@ const constantTable = [
     title: "brilliant better",
     difficulty: 3,
     constant: {
-      amazon: 11.8,
       starplus: 0,
       star: 0,
       airplus: 0,
@@ -1113,7 +740,6 @@ const constantTable = [
     title: "FREEDOM DiVE",
     difficulty: 2,
     constant: {
-      amazon: 11.5,
       starplus: 0,
       star: 0,
       airplus: 0,
@@ -1126,7 +752,6 @@ const constantTable = [
     title: "星屑ユートピア",
     difficulty: 3,
     constant: {
-      amazon: 11.9,
       starplus: 0,
       star: 0,
       airplus: 0,
@@ -1139,7 +764,6 @@ const constantTable = [
     title: "Falling Roses",
     difficulty: 3,
     constant: {
-      amazon: 0,
       starplus: 0,
       star: 12.4,
       airplus: 12.4,
@@ -1152,7 +776,6 @@ const constantTable = [
     title: "拝啓ドッペルゲンガー",
     difficulty: 3,
     constant: {
-      amazon: 13.1,
       starplus: 13,
       star: 0,
       airplus: 0,
@@ -1165,7 +788,6 @@ const constantTable = [
     title: "BlazinG AIR",
     difficulty: 3,
     constant: {
-      amazon: 13.3,
       starplus: 13.3,
       star: 0,
       airplus: 0,
@@ -1178,7 +800,6 @@ const constantTable = [
     title: "Sparking Revolver",
     difficulty: 3,
     constant: {
-      amazon: 13.6,
       starplus: 13.5,
       star: 0,
       airplus: 0,
@@ -1191,7 +812,6 @@ const constantTable = [
     title: "Doppelganger",
     difficulty: 2,
     constant: {
-      amazon: 11.8,
       starplus: 12,
       star: 0,
       airplus: 0,
@@ -1204,7 +824,6 @@ const constantTable = [
     title: "Doppelganger",
     difficulty: 3,
     constant: {
-      amazon: 13.8,
       starplus: 13.8,
       star: 0,
       airplus: 0,
@@ -1217,7 +836,6 @@ const constantTable = [
     title: "Gate of Doom",
     difficulty: 3,
     constant: {
-      amazon: 13.8,
       starplus: 13.8,
       star: 0,
       airplus: 0,
@@ -1230,7 +848,6 @@ const constantTable = [
     title: "otorii INNOVATED -[i]3-",
     difficulty: 2,
     constant: {
-      amazon: 12.6,
       starplus: 12.4,
       star: 0,
       airplus: 0,
@@ -1243,7 +860,6 @@ const constantTable = [
     title: "otorii INNOVATED -[i]3-",
     difficulty: 3,
     constant: {
-      amazon: 13.9,
       starplus: 13.9,
       star: 0,
       airplus: 0,
@@ -1256,7 +872,6 @@ const constantTable = [
     title: "Hyper Active",
     difficulty: 3,
     constant: {
-      amazon: 13.3,
       starplus: 13.3,
       star: 13.3,
       airplus: 0,
@@ -1269,7 +884,6 @@ const constantTable = [
     title: "L'épilogue",
     difficulty: 3,
     constant: {
-      amazon: 12.5,
       starplus: 12.5,
       star: 12.5,
       airplus: 0,
@@ -1282,7 +896,6 @@ const constantTable = [
     title: "D✪N’T  ST✪P  R✪CKIN’ ～[✪_✪] MIX～",
     difficulty: 3,
     constant: {
-      amazon: 0,
       starplus: 12.5,
       star: 12.5,
       airplus: 0,
@@ -1295,7 +908,6 @@ const constantTable = [
     title: "Caliburne ～Story of the Legendary sword～",
     difficulty: 3,
     constant: {
-      amazon: 13.9,
       starplus: 13.9,
       star: 13.9,
       airplus: 0,
@@ -1308,7 +920,6 @@ const constantTable = [
     title: "Caliburne ～Story of the Legendary sword～",
     difficulty: 2,
     constant: {
-      amazon: 12.1,
       starplus: 12.1,
       star: 12.1,
       airplus: 0,
@@ -1321,7 +932,6 @@ const constantTable = [
     title: "Vitalization",
     difficulty: 3,
     constant: {
-      amazon: 12.1,
       starplus: 12.1,
       star: 12.1,
       airplus: 0,
@@ -1334,7 +944,6 @@ const constantTable = [
     title: "Absolunote",
     difficulty: 3,
     constant: {
-      amazon: 12.3,
       starplus: 12.3,
       star: 12.3,
       airplus: 0,
@@ -1347,7 +956,6 @@ const constantTable = [
     title: "木彫り鯰と右肩ゾンビ",
     difficulty: 3,
     constant: {
-      amazon: 12.4,
       starplus: 12.4,
       star: 12.4,
       airplus: 0,
@@ -1360,7 +968,6 @@ const constantTable = [
     title: "WAVE",
     difficulty: 3,
     constant: {
-      amazon: 12.2,
       starplus: 12.2,
       star: 12.2,
       airplus: 0,
@@ -1373,7 +980,6 @@ const constantTable = [
     title: "亡國覚醒カタルシス",
     difficulty: 3,
     constant: {
-      amazon: 12.2,
       starplus: 12.2,
       star: 12.2,
       airplus: 0,
@@ -1386,7 +992,6 @@ const constantTable = [
     title: "ETERNAL DRAIN",
     difficulty: 3,
     constant: {
-      amazon: 12.6,
       starplus: 12.5,
       star: 12.5,
       airplus: 0,
@@ -1399,7 +1004,6 @@ const constantTable = [
     title: "G e n g a o z o",
     difficulty: 3,
     constant: {
-      amazon: 13.6,
       starplus: 13.6,
       star: 13.6,
       airplus: 0,
@@ -1412,7 +1016,6 @@ const constantTable = [
     title: "G e n g a o z o",
     difficulty: 2,
     constant: {
-      amazon: 12.4,
       starplus: 12.4,
       star: 12.4,
       airplus: 0,
@@ -1425,7 +1028,6 @@ const constantTable = [
     title: "-OutsideR:RequieM-",
     difficulty: 3,
     constant: {
-      amazon: 12.7,
       starplus: 12.7,
       star: 12.7,
       airplus: 0,
@@ -1438,7 +1040,6 @@ const constantTable = [
     title: "不安定な神様",
     difficulty: 3,
     constant: {
-      amazon: 12.1,
       starplus: 12.1,
       star: 12.1,
       airplus: 0,
@@ -1451,7 +1052,6 @@ const constantTable = [
     title: "セハガガガンバッちゃう！！",
     difficulty: 3,
     constant: {
-      amazon: 12.6,
       starplus: 12.6,
       star: 12.6,
       airplus: 0,
@@ -1464,7 +1064,6 @@ const constantTable = [
     title: "Cosmic twinkle star",
     difficulty: 3,
     constant: {
-      amazon: 12.4,
       starplus: 12.4,
       star: 12.4,
       airplus: 0,
@@ -1477,7 +1076,6 @@ const constantTable = [
     title: "終わりなき物語",
     difficulty: 3,
     constant: {
-      amazon: 12.3,
       starplus: 12.3,
       star: 12.3,
       airplus: 0,
@@ -1490,7 +1088,6 @@ const constantTable = [
     title: "Now Loading!!!!",
     difficulty: 3,
     constant: {
-      amazon: 12.3,
       starplus: 12.3,
       star: 12.3,
       airplus: 0,
@@ -1503,7 +1100,6 @@ const constantTable = [
     title: "ガチャガチャきゅ～と・ふぃぎゅ@メイト",
     difficulty: 3,
     constant: {
-      amazon: 12.5,
       starplus: 12.5,
       star: 12.5,
       airplus: 0,
@@ -1516,7 +1112,6 @@ const constantTable = [
     title: "Vampire",
     difficulty: 3,
     constant: {
-      amazon: 12.6,
       starplus: 12.6,
       star: 12.6,
       airplus: 0,
@@ -1529,7 +1124,6 @@ const constantTable = [
     title: "Paradisus-Paradoxum",
     difficulty: 3,
     constant: {
-      amazon: 12.4,
       starplus: 12.4,
       star: 12.4,
       airplus: 0,
@@ -1542,7 +1136,6 @@ const constantTable = [
     title: "ようこそジャパリパークへ",
     difficulty: 3,
     constant: {
-      amazon: 12.1,
       starplus: 12.1,
       star: 12.1,
       airplus: 0,
@@ -1555,7 +1148,6 @@ const constantTable = [
     title: "ハレ晴レユカイ",
     difficulty: 3,
     constant: {
-      amazon: 12,
       starplus: 12,
       star: 12,
       airplus: 0,
@@ -1568,7 +1160,6 @@ const constantTable = [
     title: "Face of Fact",
     difficulty: 3,
     constant: {
-      amazon: 12.1,
       starplus: 12.1,
       star: 12.1,
       airplus: 12.1,
@@ -1581,7 +1172,6 @@ const constantTable = [
     title: "クローバー♣かくめーしょん",
     difficulty: 3,
     constant: {
-      amazon: 12.3,
       starplus: 12.3,
       star: 12.3,
       airplus: 12.3,
@@ -1594,7 +1184,6 @@ const constantTable = [
     title: "ラブリー☆えんじぇる!!",
     difficulty: 3,
     constant: {
-      amazon: 12.3,
       starplus: 12.3,
       star: 12.3,
       airplus: 12.3,
@@ -1607,7 +1196,6 @@ const constantTable = [
     title: "Star☆Glitter",
     difficulty: 3,
     constant: {
-      amazon: 12,
       starplus: 12,
       star: 12,
       airplus: 12.1,
@@ -1620,7 +1208,6 @@ const constantTable = [
     title: "Redo",
     difficulty: 3,
     constant: {
-      amazon: 12.4,
       starplus: 12.4,
       star: 12.4,
       airplus: 12.4,
@@ -1633,7 +1220,6 @@ const constantTable = [
     title: "かくしん的☆めたまるふぉ～ぜっ!",
     difficulty: 3,
     constant: {
-      amazon: 12.1,
       starplus: 12.1,
       star: 12.1,
       airplus: 12.1,
@@ -1646,7 +1232,6 @@ const constantTable = [
     title: "夏影",
     difficulty: 3,
     constant: {
-      amazon: 12.2,
       starplus: 12.2,
       star: 12.2,
       airplus: 12.2,
@@ -1659,7 +1244,6 @@ const constantTable = [
     title: "Rising Hope",
     difficulty: 3,
     constant: {
-      amazon: 12.5,
       starplus: 12.5,
       star: 12.5,
       airplus: 12.5,
@@ -1672,7 +1256,6 @@ const constantTable = [
     title: "Falling Roses",
     difficulty: 3,
     constant: {
-      amazon: 0,
       starplus: 0,
       star: 12.4,
       airplus: 12.4,
@@ -1685,7 +1268,6 @@ const constantTable = [
     title: "回レ！雪月花",
     difficulty: 3,
     constant: {
-      amazon: 12.3,
       starplus: 12.3,
       star: 12.3,
       airplus: 12.3,
@@ -1698,7 +1280,6 @@ const constantTable = [
     title: "ファッとして桃源郷",
     difficulty: 3,
     constant: {
-      amazon: 12.5,
       starplus: 12.5,
       star: 12.5,
       airplus: 12.5,
@@ -1711,7 +1292,6 @@ const constantTable = [
     title: "シュガーソングとビターステップ",
     difficulty: 3,
     constant: {
-      amazon: 12.2,
       starplus: 12.2,
       star: 12.2,
       airplus: 12.2,
@@ -1724,7 +1304,6 @@ const constantTable = [
     title: "Fire◎Flower",
     difficulty: 3,
     constant: {
-      amazon: 12.4,
       starplus: 12.4,
       star: 12.4,
       airplus: 0,
@@ -1737,7 +1316,6 @@ const constantTable = [
     title: "卑怯戦隊うろたんだー",
     difficulty: 3,
     constant: {
-      amazon: 12.3,
       starplus: 12.3,
       star: 12.3,
       airplus: 0,
@@ -1750,7 +1328,6 @@ const constantTable = [
     title: "Change me",
     difficulty: 3,
     constant: {
-      amazon: 12.5,
       starplus: 12.5,
       star: 12.5,
       airplus: 0,
@@ -1763,7 +1340,6 @@ const constantTable = [
     title: "Palette",
     difficulty: 3,
     constant: {
-      amazon: 12.1,
       starplus: 12.1,
       star: 12.1,
       airplus: 0,
@@ -1776,7 +1352,6 @@ const constantTable = [
     title: "砂の惑星 feat. HATSUNE MIKU",
     difficulty: 3,
     constant: {
-      amazon: 12.3,
       starplus: 12.3,
       star: 12.3,
       airplus: 0,
@@ -1789,7 +1364,6 @@ const constantTable = [
     title: "すきなことだけでいいです",
     difficulty: 3,
     constant: {
-      amazon: 12.2,
       starplus: 12.2,
       star: 12.2,
       airplus: 12.2,
@@ -1802,7 +1376,6 @@ const constantTable = [
     title: "デリヘル呼んだら君が来た",
     difficulty: 3,
     constant: {
-      amazon: 12.4,
       starplus: 12.4,
       star: 12.4,
       airplus: 12.4,
@@ -1815,7 +1388,6 @@ const constantTable = [
     title: "チュルリラ・チュルリラ・ダッダッダ！",
     difficulty: 3,
     constant: {
-      amazon: 12.6,
       starplus: 12.6,
       star: 12.5,
       airplus: 12.5,
@@ -1828,7 +1400,6 @@ const constantTable = [
     title: "ECHO",
     difficulty: 3,
     constant: {
-      amazon: 12.2,
       starplus: 12.2,
       star: 12.2,
       airplus: 12.2,
@@ -1841,7 +1412,6 @@ const constantTable = [
     title: "地球最後の告白を",
     difficulty: 3,
     constant: {
-      amazon: 12.3,
       starplus: 12.3,
       star: 12.3,
       airplus: 12.3,
@@ -1854,7 +1424,6 @@ const constantTable = [
     title: "虎視眈々",
     difficulty: 3,
     constant: {
-      amazon: 12.4,
       starplus: 12.4,
       star: 12.4,
       airplus: 12.4,
@@ -1867,7 +1436,6 @@ const constantTable = [
     title: "神曲",
     difficulty: 3,
     constant: {
-      amazon: 12,
       starplus: 12,
       star: 12,
       airplus: 12,
@@ -1880,7 +1448,6 @@ const constantTable = [
     title: "白い雪のプリンセスは",
     difficulty: 3,
     constant: {
-      amazon: 12.2,
       starplus: 12.2,
       star: 12.2,
       airplus: 12.2,
@@ -1893,7 +1460,6 @@ const constantTable = [
     title: "エンヴィキャットウォーク",
     difficulty: 3,
     constant: {
-      amazon: 12.4,
       starplus: 12.4,
       star: 12.4,
       airplus: 12.3,
@@ -1906,7 +1472,6 @@ const constantTable = [
     title: "アウターサイエンス",
     difficulty: 3,
     constant: {
-      amazon: 12.3,
       starplus: 12.3,
       star: 12.3,
       airplus: 12.3,
@@ -1919,7 +1484,6 @@ const constantTable = [
     title: "シジョウノコエ VOCALO ver.",
     difficulty: 3,
     constant: {
-      amazon: 12.2,
       starplus: 12.2,
       star: 12.2,
       airplus: 12.2,
@@ -1932,7 +1496,6 @@ const constantTable = [
     title: "初音ミクの消失",
     difficulty: 2,
     constant: {
-      amazon: 12,
       starplus: 12,
       star: 12,
       airplus: 12,
@@ -1945,7 +1508,6 @@ const constantTable = [
     title: "放課後革命",
     difficulty: 3,
     constant: {
-      amazon: 12.3,
       starplus: 12.3,
       star: 12.3,
       airplus: 12.3,
@@ -1958,7 +1520,6 @@ const constantTable = [
     title: "ウミユリ海底譚",
     difficulty: 3,
     constant: {
-      amazon: 12.1,
       starplus: 12.1,
       star: 12.1,
       airplus: 12.1,
@@ -1971,7 +1532,6 @@ const constantTable = [
     title: "アスノヨゾラ哨戒班",
     difficulty: 3,
     constant: {
-      amazon: 12.4,
       starplus: 12.4,
       star: 12.4,
       airplus: 12.4,
@@ -1984,7 +1544,6 @@ const constantTable = [
     title: "天樂",
     difficulty: 3,
     constant: {
-      amazon: 12.2,
       starplus: 12.2,
       star: 12.2,
       airplus: 12.2,
@@ -1997,7 +1556,6 @@ const constantTable = [
     title: "Crazy ∞ nighT",
     difficulty: 3,
     constant: {
-      amazon: 12.5,
       starplus: 12.5,
       star: 12.5,
       airplus: 12.5,
@@ -2010,7 +1568,6 @@ const constantTable = [
     title: "如月アテンション",
     difficulty: 3,
     constant: {
-      amazon: 12.3,
       starplus: 12.3,
       star: 12.3,
       airplus: 12.3,
@@ -2023,7 +1580,6 @@ const constantTable = [
     title: "夜咄ディセイブ",
     difficulty: 3,
     constant: {
-      amazon: 12.6,
       starplus: 12.6,
       star: 12.6,
       airplus: 12.6,
@@ -2036,7 +1592,6 @@ const constantTable = [
     title: "このふざけた素晴らしき世界は、僕の為にある",
     difficulty: 3,
     constant: {
-      amazon: 12,
       starplus: 12,
       star: 12,
       airplus: 12,
@@ -2049,7 +1604,6 @@ const constantTable = [
     title: "いろは唄",
     difficulty: 3,
     constant: {
-      amazon: 12.1,
       starplus: 12.1,
       star: 12.1,
       airplus: 12.1,
@@ -2062,7 +1616,6 @@ const constantTable = [
     title: "愛迷エレジー",
     difficulty: 3,
     constant: {
-      amazon: 12.3,
       starplus: 12.3,
       star: 12.3,
       airplus: 12.3,
@@ -2075,7 +1628,6 @@ const constantTable = [
     title: "イカサマライフゲイム",
     difficulty: 3,
     constant: {
-      amazon: 12.2,
       starplus: 12.2,
       star: 12.2,
       airplus: 12.2,
@@ -2088,7 +1640,6 @@ const constantTable = [
     title: "セツナトリップ",
     difficulty: 3,
     constant: {
-      amazon: 12.5,
       starplus: 12.4,
       star: 12.4,
       airplus: 12.3,
@@ -2101,7 +1652,6 @@ const constantTable = [
     title: "六兆年と一夜物語",
     difficulty: 3,
     constant: {
-      amazon: 12.5,
       starplus: 12.3,
       star: 12.1,
       airplus: 12.1,
@@ -2114,7 +1664,6 @@ const constantTable = [
     title: "一触即発☆禅ガール",
     difficulty: 3,
     constant: {
-      amazon: 12.3,
       starplus: 12.1,
       star: 12.1,
       airplus: 12.1,
@@ -2127,7 +1676,6 @@ const constantTable = [
     title: "腐れ外道とチョコレゐト",
     difficulty: 3,
     constant: {
-      amazon: 12.3,
       starplus: 12,
       star: 12,
       airplus: 12,
@@ -2140,7 +1688,6 @@ const constantTable = [
     title: "タイガーランペイジ",
     difficulty: 3,
     constant: {
-      amazon: 12.5,
       starplus: 12.5,
       star: 12.5,
       airplus: 12.5,
@@ -2153,7 +1700,6 @@ const constantTable = [
     title: "ロストワンの号哭",
     difficulty: 3,
     constant: {
-      amazon: 12.4,
       starplus: 12.2,
       star: 12.2,
       airplus: 12.2,
@@ -2166,7 +1712,6 @@ const constantTable = [
     title: "天狗の落とし文 feat. ｙｔｒ",
     difficulty: 3,
     constant: {
-      amazon: 12.4,
       starplus: 12.4,
       star: 12.4,
       airplus: 0,
@@ -2179,7 +1724,6 @@ const constantTable = [
     title: "Last Moments",
     difficulty: 3,
     constant: {
-      amazon: 12.5,
       starplus: 12.5,
       star: 12.5,
       airplus: 0,
@@ -2192,7 +1736,6 @@ const constantTable = [
     title: "儚きもの人間",
     difficulty: 3,
     constant: {
-      amazon: 12.5,
       starplus: 12.5,
       star: 12.5,
       airplus: 0,
@@ -2205,7 +1748,6 @@ const constantTable = [
     title: "キュアリアス光吉古牌　－祭－",
     difficulty: 3,
     constant: {
-      amazon: 12.4,
       starplus: 12.4,
       star: 12.4,
       airplus: 12.4,
@@ -2218,7 +1760,6 @@ const constantTable = [
     title: "Help me, ERINNNNNN!! -Cranky remix-",
     difficulty: 3,
     constant: {
-      amazon: 12.2,
       starplus: 12.2,
       star: 12.2,
       airplus: 12.2,
@@ -2231,7 +1772,6 @@ const constantTable = [
     title: "仙酌絶唱のファンタジア",
     difficulty: 3,
     constant: {
-      amazon: 12.6,
       starplus: 12.6,
       star: 12.6,
       airplus: 12.6,
@@ -2244,7 +1784,6 @@ const constantTable = [
     title: "Starlight Vision",
     difficulty: 3,
     constant: {
-      amazon: 12.5,
       starplus: 12.5,
       star: 12.6,
       airplus: 12.6,
@@ -2257,7 +1796,6 @@ const constantTable = [
     title: "Club Ibuki in Break All",
     difficulty: 3,
     constant: {
-      amazon: 12.5,
       starplus: 12.5,
       star: 12.5,
       airplus: 12.5,
@@ -2270,7 +1808,6 @@ const constantTable = [
     title: "永遠のメロディ",
     difficulty: 3,
     constant: {
-      amazon: 12.3,
       starplus: 12.3,
       star: 12.3,
       airplus: 12.3,
@@ -2283,7 +1820,6 @@ const constantTable = [
     title: "愛き夜道 feat. ランコ、雨天決行",
     difficulty: 3,
     constant: {
-      amazon: 12,
       starplus: 12,
       star: 12,
       airplus: 0,
@@ -2296,7 +1832,6 @@ const constantTable = [
     title: "Witches night",
     difficulty: 3,
     constant: {
-      amazon: 12,
       starplus: 12,
       star: 12,
       airplus: 12,
@@ -2309,7 +1844,6 @@ const constantTable = [
     title: "No Routine",
     difficulty: 3,
     constant: {
-      amazon: 12.2,
       starplus: 12.2,
       star: 12.2,
       airplus: 12.2,
@@ -2322,7 +1856,6 @@ const constantTable = [
     title: "エテルニタス・ルドロジー",
     difficulty: 3,
     constant: {
-      amazon: 12.6,
       starplus: 12.6,
       star: 12.6,
       airplus: 12.6,
@@ -2335,7 +1868,6 @@ const constantTable = [
     title: "月に叢雲華に風",
     difficulty: 3,
     constant: {
-      amazon: 12.1,
       starplus: 12.1,
       star: 12.1,
       airplus: 12.1,
@@ -2348,7 +1880,6 @@ const constantTable = [
     title: "蒼空に舞え、墨染の桜",
     difficulty: 3,
     constant: {
-      amazon: 12.3,
       starplus: 12.3,
       star: 12.3,
       airplus: 12.3,
@@ -2361,7 +1892,6 @@ const constantTable = [
     title: "FLOWER",
     difficulty: 3,
     constant: {
-      amazon: 12.3,
       starplus: 12,
       star: 12,
       airplus: 12,
@@ -2374,7 +1904,6 @@ const constantTable = [
     title: "アルストロメリア",
     difficulty: 3,
     constant: {
-      amazon: 12.2,
       starplus: 12.2,
       star: 12.2,
       airplus: 12.2,
@@ -2387,7 +1916,6 @@ const constantTable = [
     title: "凛として咲く花の如く",
     difficulty: 3,
     constant: {
-      amazon: 12.2,
       starplus: 12.2,
       star: 12.2,
       airplus: 12.2,
@@ -2400,7 +1928,6 @@ const constantTable = [
     title: "XL TECHNO",
     difficulty: 3,
     constant: {
-      amazon: 12.6,
       starplus: 12.4,
       star: 12.4,
       airplus: 12.4,
@@ -2413,7 +1940,6 @@ const constantTable = [
     title: "PRIVATE SERVICE",
     difficulty: 3,
     constant: {
-      amazon: 12.6,
       starplus: 12.6,
       star: 12.6,
       airplus: 12.6,
@@ -2426,7 +1952,6 @@ const constantTable = [
     title: "FLOATED CALM",
     difficulty: 3,
     constant: {
-      amazon: 12.4,
       starplus: 12.4,
       star: 12.4,
       airplus: 12.4,
@@ -2439,7 +1964,6 @@ const constantTable = [
     title: "L9",
     difficulty: 3,
     constant: {
-      amazon: 12.6,
       starplus: 12.6,
       star: 12.4,
       airplus: 12.2,
@@ -2452,7 +1976,6 @@ const constantTable = [
     title: "Altale",
     difficulty: 3,
     constant: {
-      amazon: 12.7,
       starplus: 12.6,
       star: 12.6,
       airplus: 12.6,
@@ -2465,7 +1988,6 @@ const constantTable = [
     title: "Äventyr",
     difficulty: 3,
     constant: {
-      amazon: 12.6,
       starplus: 12.5,
       star: 12.5,
       airplus: 12.5,
@@ -2478,7 +2000,6 @@ const constantTable = [
     title: "Lapis",
     difficulty: 3,
     constant: {
-      amazon: 12.4,
       starplus: 12.4,
       star: 12.4,
       airplus: 12.4,
@@ -2491,7 +2012,6 @@ const constantTable = [
     title: "Say A Vengeance",
     difficulty: 3,
     constant: {
-      amazon: 12.7,
       starplus: 12.7,
       star: 12.6,
       airplus: 12.6,
@@ -2504,7 +2024,6 @@ const constantTable = [
     title: "010",
     difficulty: 3,
     constant: {
-      amazon: 12.6,
       starplus: 12.6,
       star: 12.6,
       airplus: 12.6,
@@ -2517,7 +2036,6 @@ const constantTable = [
     title: "ERIS -Legend of Gaidelia-",
     difficulty: 3,
     constant: {
-      amazon: 12.5,
       starplus: 12.5,
       star: 12.5,
       airplus: 12.5,
@@ -2530,7 +2048,6 @@ const constantTable = [
     title: "STAGER",
     difficulty: 3,
     constant: {
-      amazon: 12.6,
       starplus: 12.6,
       star: 12.6,
       airplus: 12.6,
@@ -2543,7 +2060,6 @@ const constantTable = [
     title: "Her Majesty",
     difficulty: 3,
     constant: {
-      amazon: 12.6,
       starplus: 12.6,
       star: 12.6,
       airplus: 12.6,
@@ -2556,7 +2072,6 @@ const constantTable = [
     title: "Sakura Fubuki",
     difficulty: 3,
     constant: {
-      amazon: 12.5,
       starplus: 12.5,
       star: 12.5,
       airplus: 12.5,
@@ -2569,7 +2084,6 @@ const constantTable = [
     title: "Kronos",
     difficulty: 3,
     constant: {
-      amazon: 12.4,
       starplus: 12.4,
       star: 12.4,
       airplus: 12.4,
@@ -2582,7 +2096,6 @@ const constantTable = [
     title: "風仁雷仁",
     difficulty: 3,
     constant: {
-      amazon: 12.3,
       starplus: 12.3,
       star: 12.3,
       airplus: 12.3,
@@ -2595,7 +2108,6 @@ const constantTable = [
     title: "Bird Sprite",
     difficulty: 3,
     constant: {
-      amazon: 12.2,
       starplus: 12.2,
       star: 12.2,
       airplus: 12.2,
@@ -2608,7 +2120,6 @@ const constantTable = [
     title: "Reach for the Stars",
     difficulty: 3,
     constant: {
-      amazon: 12.3,
       starplus: 12.3,
       star: 12.3,
       airplus: 12.3,
@@ -2621,7 +2132,6 @@ const constantTable = [
     title: "The Concept of Love",
     difficulty: 3,
     constant: {
-      amazon: 12.3,
       starplus: 12.1,
       star: 12.1,
       airplus: 12.1,
@@ -2634,7 +2144,6 @@ const constantTable = [
     title: "STAIRWAY TO GENERATION",
     difficulty: 3,
     constant: {
-      amazon: 12.3,
       starplus: 12.3,
       star: 12.3,
       airplus: 12.3,
@@ -2647,7 +2156,6 @@ const constantTable = [
     title: "Through The Tower",
     difficulty: 3,
     constant: {
-      amazon: 12.4,
       starplus: 12.4,
       star: 12.4,
       airplus: 12.4,
@@ -2660,7 +2168,6 @@ const constantTable = [
     title: "Burning Hearts ～炎のANGEL～",
     difficulty: 3,
     constant: {
-      amazon: 12.5,
       starplus: 12.5,
       star: 12.5,
       airplus: 0,
@@ -2673,7 +2180,6 @@ const constantTable = [
     title: "無敵We are one!!",
     difficulty: 3,
     constant: {
-      amazon: 12.1,
       starplus: 12.1,
       star: 12.1,
       airplus: 12.1,
@@ -2686,7 +2192,6 @@ const constantTable = [
     title: "ドキドキDREAM!!!",
     difficulty: 3,
     constant: {
-      amazon: 12.1,
       starplus: 12.1,
       star: 12.1,
       airplus: 12.1,
@@ -2699,7 +2204,6 @@ const constantTable = [
     title: "Still",
     difficulty: 3,
     constant: {
-      amazon: 12.5,
       starplus: 12.5,
       star: 12.5,
       airplus: 12.5,
@@ -2712,7 +2216,6 @@ const constantTable = [
     title: "Session High⤴",
     difficulty: 3,
     constant: {
-      amazon: 12.6,
       starplus: 12.6,
       star: 12.6,
       airplus: 0,
@@ -2726,7 +2229,6 @@ const constantTable = [
       "私の中の幻想的世界観及びその顕現を想起させたある現実での出来事に関する一考察",
     difficulty: 3,
     constant: {
-      amazon: 12.5,
       starplus: 12.5,
       star: 12.5,
       airplus: 12.5,
@@ -2739,7 +2241,6 @@ const constantTable = [
     title: "ハート・ビート",
     difficulty: 3,
     constant: {
-      amazon: 12.1,
       starplus: 12.1,
       star: 12.1,
       airplus: 12.1,
@@ -2752,7 +2253,6 @@ const constantTable = [
     title: "猛進ソリストライフ！",
     difficulty: 3,
     constant: {
-      amazon: 12.2,
       starplus: 12.2,
       star: 12.2,
       airplus: 12.2,
@@ -2765,7 +2265,6 @@ const constantTable = [
     title: "My Dearest Song",
     difficulty: 3,
     constant: {
-      amazon: 12.2,
       starplus: 12.2,
       star: 12.2,
       airplus: 12.2,
@@ -2778,7 +2277,6 @@ const constantTable = [
     title: "TRUST",
     difficulty: 3,
     constant: {
-      amazon: 12.4,
       starplus: 12.4,
       star: 12.4,
       airplus: 12.4,
@@ -2791,7 +2289,6 @@ const constantTable = [
     title: "猫祭り",
     difficulty: 3,
     constant: {
-      amazon: 12.3,
       starplus: 12.3,
       star: 12.3,
       airplus: 12.3,
@@ -2804,7 +2301,6 @@ const constantTable = [
     title: "SPICY SWINGY STYLE",
     difficulty: 3,
     constant: {
-      amazon: 12.3,
       starplus: 12.3,
       star: 12.3,
       airplus: 12.3,
@@ -2817,7 +2313,6 @@ const constantTable = [
     title: "イロトリドリのメロディ",
     difficulty: 3,
     constant: {
-      amazon: 12.5,
       starplus: 12.5,
       star: 12.5,
       airplus: 0,
@@ -2830,7 +2325,6 @@ const constantTable = [
     title: "あねぺったん",
     difficulty: 3,
     constant: {
-      amazon: 12.1,
       starplus: 12.1,
       star: 12.1,
       airplus: 12.1,
@@ -2843,7 +2337,6 @@ const constantTable = [
     title: "ＧＯ！ＧＯ！ラブリズム♥ ～あーりん書類審査通過記念Ver.～",
     difficulty: 3,
     constant: {
-      amazon: 12.1,
       starplus: 12.1,
       star: 12.1,
       airplus: 0,
@@ -2856,7 +2349,6 @@ const constantTable = [
     title: "空威張りビヘイビア",
     difficulty: 3,
     constant: {
-      amazon: 12.3,
       starplus: 12.3,
       star: 12.3,
       airplus: 12.3,
@@ -2869,7 +2361,6 @@ const constantTable = [
     title: "悪戯",
     difficulty: 3,
     constant: {
-      amazon: 12.2,
       starplus: 12.2,
       star: 12.2,
       airplus: 12.2,
@@ -2882,7 +2373,6 @@ const constantTable = [
     title: "Barbed Eye",
     difficulty: 3,
     constant: {
-      amazon: 12,
       starplus: 12,
       star: 12,
       airplus: 12,
@@ -2895,7 +2385,6 @@ const constantTable = [
     title: "相思創愛",
     difficulty: 3,
     constant: {
-      amazon: 12.4,
       starplus: 12.4,
       star: 12.4,
       airplus: 0,
@@ -2908,7 +2397,6 @@ const constantTable = [
     title: "Garakuta Doll Play",
     difficulty: 2,
     constant: {
-      amazon: 12.3,
       starplus: 12.3,
       star: 12.3,
       airplus: 12.3,
@@ -2921,7 +2409,6 @@ const constantTable = [
     title: "AMAZING MIGHTYYYY!!!!",
     difficulty: 2,
     constant: {
-      amazon: 12,
       starplus: 12,
       star: 12,
       airplus: 0,
@@ -2934,7 +2421,6 @@ const constantTable = [
     title: "Contrapasso -inferno-",
     difficulty: 2,
     constant: {
-      amazon: 12.1,
       starplus: 12.1,
       star: 12.4,
       airplus: 12.4,
@@ -2947,7 +2433,6 @@ const constantTable = [
     title: "Xevel",
     difficulty: 2,
     constant: {
-      amazon: 12,
       starplus: 12,
       star: 12,
       airplus: 0,
@@ -2960,7 +2445,6 @@ const constantTable = [
     title: "Infantoon Fantasy",
     difficulty: 3,
     constant: {
-      amazon: 12.4,
       starplus: 12.3,
       star: 12.3,
       airplus: 12.3,
@@ -2973,7 +2457,6 @@ const constantTable = [
     title: "砂漠のハンティングガール♡",
     difficulty: 3,
     constant: {
-      amazon: 12.1,
       starplus: 12.1,
       star: 12.1,
       airplus: 12.1,
@@ -2986,7 +2469,6 @@ const constantTable = [
     title: "Teriqma",
     difficulty: 3,
     constant: {
-      amazon: 12.3,
       starplus: 12.3,
       star: 12.3,
       airplus: 12.3,
@@ -2999,7 +2481,6 @@ const constantTable = [
     title: "The ether",
     difficulty: 3,
     constant: {
-      amazon: 12.2,
       starplus: 12.2,
       star: 12,
       airplus: 12,
@@ -3012,7 +2493,6 @@ const constantTable = [
     title: "Memories of Sun and Moon",
     difficulty: 3,
     constant: {
-      amazon: 12.5,
       starplus: 12.5,
       star: 12.5,
       airplus: 12.5,
@@ -3025,7 +2505,6 @@ const constantTable = [
     title: "Alma",
     difficulty: 3,
     constant: {
-      amazon: 12.7,
       starplus: 12.6,
       star: 12.6,
       airplus: 12.6,
@@ -3038,7 +2517,6 @@ const constantTable = [
     title: "STAR",
     difficulty: 3,
     constant: {
-      amazon: 12.4,
       starplus: 12.4,
       star: 12.4,
       airplus: 12.4,
@@ -3051,7 +2529,6 @@ const constantTable = [
     title: "とーきょー全域★アキハバラ？",
     difficulty: 3,
     constant: {
-      amazon: 12.5,
       starplus: 12.5,
       star: 12.5,
       airplus: 12.5,
@@ -3064,7 +2541,6 @@ const constantTable = [
     title: "名も無い鳥",
     difficulty: 3,
     constant: {
-      amazon: 12.5,
       starplus: 12.4,
       star: 12.4,
       airplus: 12.4,
@@ -3077,7 +2553,6 @@ const constantTable = [
     title: "宛城、炎上！！",
     difficulty: 2,
     constant: {
-      amazon: 12.2,
       starplus: 12.2,
       star: 12.3,
       airplus: 12.3,
@@ -3090,7 +2565,6 @@ const constantTable = [
     title: "後夜祭",
     difficulty: 3,
     constant: {
-      amazon: 12.3,
       starplus: 12.3,
       star: 12.3,
       airplus: 12.3,
@@ -3103,7 +2577,6 @@ const constantTable = [
     title: "Tuning Rangers",
     difficulty: 3,
     constant: {
-      amazon: 12.5,
       starplus: 12.5,
       star: 12.5,
       airplus: 12.5,
@@ -3116,7 +2589,6 @@ const constantTable = [
     title: "明るい未来",
     difficulty: 3,
     constant: {
-      amazon: 12.3,
       starplus: 12.3,
       star: 12.3,
       airplus: 12.3,
@@ -3129,7 +2601,6 @@ const constantTable = [
     title: "Schrecklicher Aufstand",
     difficulty: 2,
     constant: {
-      amazon: 12.5,
       starplus: 12.5,
       star: 12.3,
       airplus: 12.3,
@@ -3142,7 +2613,6 @@ const constantTable = [
     title: "ロボットプラネットユートピア",
     difficulty: 3,
     constant: {
-      amazon: 12.3,
       starplus: 12.3,
       star: 12.3,
       airplus: 12.3,
@@ -3155,7 +2625,6 @@ const constantTable = [
     title: "Hyperion",
     difficulty: 3,
     constant: {
-      amazon: 12.5,
       starplus: 12.5,
       star: 12.5,
       airplus: 12.5,
@@ -3168,7 +2637,6 @@ const constantTable = [
     title: "紅華刑",
     difficulty: 2,
     constant: {
-      amazon: 12,
       starplus: 12,
       star: 12,
       airplus: 0,
@@ -3181,7 +2649,6 @@ const constantTable = [
     title: "サウンドプレイヤー",
     difficulty: 3,
     constant: {
-      amazon: 12.4,
       starplus: 12.4,
       star: 12.4,
       airplus: 12.4,
@@ -3194,7 +2661,6 @@ const constantTable = [
     title: "D.E.A.D.L.Y.",
     difficulty: 3,
     constant: {
-      amazon: 12.4,
       starplus: 12.4,
       star: 12.4,
       airplus: 12.4,
@@ -3207,7 +2673,6 @@ const constantTable = [
     title: "ウソラセラ",
     difficulty: 3,
     constant: {
-      amazon: 12.6,
       starplus: 12.6,
       star: 12.6,
       airplus: 12.7,
@@ -3220,7 +2685,6 @@ const constantTable = [
     title: "最愛テトラグラマトン",
     difficulty: 3,
     constant: {
-      amazon: 12.6,
       starplus: 12.6,
       star: 12.6,
       airplus: 12.6,
@@ -3233,7 +2697,6 @@ const constantTable = [
     title: "響",
     difficulty: 3,
     constant: {
-      amazon: 12,
       starplus: 12,
       star: 12,
       airplus: 12,
@@ -3246,7 +2709,6 @@ const constantTable = [
     title: "Devastating Blaster",
     difficulty: 2,
     constant: {
-      amazon: 12.2,
       starplus: 12.2,
       star: 12.2,
       airplus: 12.2,
@@ -3259,7 +2721,6 @@ const constantTable = [
     title: "光線チューニング",
     difficulty: 3,
     constant: {
-      amazon: 12.3,
       starplus: 12.3,
       star: 12.3,
       airplus: 0,
@@ -3272,7 +2733,6 @@ const constantTable = [
     title: "哀しみ集め",
     difficulty: 3,
     constant: {
-      amazon: 12,
       starplus: 12,
       star: 12,
       airplus: 0,
@@ -3285,7 +2745,6 @@ const constantTable = [
     title: "PinqPiq",
     difficulty: 3,
     constant: {
-      amazon: 12.5,
       starplus: 12.5,
       star: 12.5,
       airplus: 0,
@@ -3298,7 +2757,6 @@ const constantTable = [
     title: "WE GOTTA SOUL",
     difficulty: 3,
     constant: {
-      amazon: 12.2,
       starplus: 12.2,
       star: 12.2,
       airplus: 0,
@@ -3311,7 +2769,6 @@ const constantTable = [
     title: "Kattobi KEIKYU Rider",
     difficulty: 2,
     constant: {
-      amazon: 12.5,
       starplus: 12.5,
       star: 12.5,
       airplus: 0,
@@ -3324,7 +2781,6 @@ const constantTable = [
     title: "Glorious Crown (tpz over-Over-OVERCUTE REMIX)",
     difficulty: 2,
     constant: {
-      amazon: 12.6,
       starplus: 12.6,
       star: 12.6,
       airplus: 0,
@@ -3337,7 +2793,6 @@ const constantTable = [
     title: "Wake up Dreamer",
     difficulty: 3,
     constant: {
-      amazon: 12.6,
       starplus: 12.6,
       star: 12.6,
       airplus: 0,
@@ -3350,7 +2805,6 @@ const constantTable = [
     title: "La Baguette Magique",
     difficulty: 3,
     constant: {
-      amazon: 12.5,
       starplus: 12.5,
       star: 12.5,
       airplus: 0,
@@ -3363,7 +2817,6 @@ const constantTable = [
     title: "Rendezvous",
     difficulty: 3,
     constant: {
-      amazon: 12.5,
       starplus: 12.5,
       star: 12.5,
       airplus: 0,
@@ -3376,7 +2829,6 @@ const constantTable = [
     title: "時の冒険者",
     difficulty: 3,
     constant: {
-      amazon: 12.7,
       starplus: 12.7,
       star: 12.6,
       airplus: 0,
@@ -3389,7 +2841,6 @@ const constantTable = [
     title: "FEEL×ALIVE",
     difficulty: 3,
     constant: {
-      amazon: 12.7,
       starplus: 12.7,
       star: 12.7,
       airplus: 12.7,
@@ -3402,7 +2853,6 @@ const constantTable = [
     title: "ぶぉん！ぶぉん！らいど・おん！",
     difficulty: 3,
     constant: {
-      amazon: 12.9,
       starplus: 12.9,
       star: 12.9,
       airplus: 12.9,
@@ -3415,7 +2865,6 @@ const constantTable = [
     title: "MY LIBERATION",
     difficulty: 3,
     constant: {
-      amazon: 12.7,
       starplus: 12.7,
       star: 12.7,
       airplus: 12.7,
@@ -3428,7 +2877,6 @@ const constantTable = [
     title: "SAVIOR OF SONG",
     difficulty: 3,
     constant: {
-      amazon: 12.8,
       starplus: 12.8,
       star: 12.8,
       airplus: 12.8,
@@ -3441,7 +2889,6 @@ const constantTable = [
     title: "パーフェクト生命",
     difficulty: 3,
     constant: {
-      amazon: 12.7,
       starplus: 12.7,
       star: 12.7,
       airplus: 0,
@@ -3454,7 +2901,6 @@ const constantTable = [
     title: "アンハッピーリフレイン",
     difficulty: 3,
     constant: {
-      amazon: 12.7,
       starplus: 12.7,
       star: 12.7,
       airplus: 12.7,
@@ -3467,7 +2913,6 @@ const constantTable = [
     title: "おこちゃま戦争",
     difficulty: 3,
     constant: {
-      amazon: 12.8,
       starplus: 12.8,
       star: 12.8,
       airplus: 12.8,
@@ -3480,7 +2925,6 @@ const constantTable = [
     title: "人生リセットボタン",
     difficulty: 3,
     constant: {
-      amazon: 12.8,
       starplus: 12.8,
       star: 12.8,
       airplus: 13,
@@ -3493,7 +2937,6 @@ const constantTable = [
     title: "鬼KYOKAN",
     difficulty: 3,
     constant: {
-      amazon: 12.8,
       starplus: 12.8,
       star: 12.8,
       airplus: 12.8,
@@ -3506,7 +2949,6 @@ const constantTable = [
     title: "幸せになれる隠しコマンドがあるらしい",
     difficulty: 3,
     constant: {
-      amazon: 12.7,
       starplus: 12.7,
       star: 12.7,
       airplus: 12.7,
@@ -3519,7 +2961,6 @@ const constantTable = [
     title: "チルドレンレコード",
     difficulty: 3,
     constant: {
-      amazon: 12.7,
       starplus: 12.7,
       star: 12.7,
       airplus: 12.6,
@@ -3532,7 +2973,6 @@ const constantTable = [
     title: "Mr. Wonderland",
     difficulty: 3,
     constant: {
-      amazon: 12.9,
       starplus: 12.9,
       star: 12.9,
       airplus: 12.9,
@@ -3545,7 +2985,6 @@ const constantTable = [
     title: "ぼくらの16bit戦争",
     difficulty: 3,
     constant: {
-      amazon: 12.8,
       starplus: 12.8,
       star: 12.8,
       airplus: 12.8,
@@ -3558,7 +2997,6 @@ const constantTable = [
     title: "脳漿炸裂ガール",
     difficulty: 3,
     constant: {
-      amazon: 12.7,
       starplus: 12.7,
       star: 12.7,
       airplus: 12.7,
@@ -3571,7 +3009,6 @@ const constantTable = [
     title: "ギガンティックO.T.N",
     difficulty: 3,
     constant: {
-      amazon: 13,
       starplus: 12.9,
       star: 12.9,
       airplus: 12.9,
@@ -3584,7 +3021,6 @@ const constantTable = [
     title: "風に乗せた願い",
     difficulty: 3,
     constant: {
-      amazon: 12.8,
       starplus: 12.8,
       star: 12.8,
       airplus: 0,
@@ -3597,7 +3033,6 @@ const constantTable = [
     title: "ケロ⑨destiny",
     difficulty: 3,
     constant: {
-      amazon: 12.7,
       starplus: 12.7,
       star: 12.7,
       airplus: 0,
@@ -3610,7 +3045,6 @@ const constantTable = [
     title: "チルノのパーフェクトさんすう教室　⑨周年バージョン",
     difficulty: 3,
     constant: {
-      amazon: 12.9,
       starplus: 12.9,
       star: 12.9,
       airplus: 0,
@@ -3623,7 +3057,6 @@ const constantTable = [
     title: "taboo tears you up",
     difficulty: 3,
     constant: {
-      amazon: 12.8,
       starplus: 12.8,
       star: 12.8,
       airplus: 12.8,
@@ -3636,7 +3069,6 @@ const constantTable = [
     title: "ひれ伏せ愚民どもっ！",
     difficulty: 3,
     constant: {
-      amazon: 12.7,
       starplus: 12.7,
       star: 12.7,
       airplus: 12.7,
@@ -3649,7 +3081,6 @@ const constantTable = [
     title: "東方妖々夢 ～the maximum moving about～",
     difficulty: 3,
     constant: {
-      amazon: 12.7,
       starplus: 12.7,
       star: 12.7,
       airplus: 12.7,
@@ -3662,7 +3093,6 @@ const constantTable = [
     title: "少女幻葬戦慄曲　～　Necro Fantasia",
     difficulty: 3,
     constant: {
-      amazon: 12.7,
       starplus: 12.7,
       star: 12.7,
       airplus: 12.5,
@@ -3675,7 +3105,6 @@ const constantTable = [
     title: "Jimang Shot",
     difficulty: 3,
     constant: {
-      amazon: 12.7,
       starplus: 12.7,
       star: 12.7,
       airplus: 12.7,
@@ -3688,7 +3117,6 @@ const constantTable = [
     title: "四次元跳躍機関",
     difficulty: 3,
     constant: {
-      amazon: 12.7,
       starplus: 12.7,
       star: 12.7,
       airplus: 12.7,
@@ -3701,7 +3129,6 @@ const constantTable = [
     title: "神威",
     difficulty: 2,
     constant: {
-      amazon: 12.7,
       starplus: 12.7,
       star: 12.7,
       airplus: 12.5,
@@ -3714,7 +3141,6 @@ const constantTable = [
     title: "The Formula",
     difficulty: 3,
     constant: {
-      amazon: 12.7,
       starplus: 12.7,
       star: 12.7,
       airplus: 12.7,
@@ -3727,7 +3153,6 @@ const constantTable = [
     title: "SAMBISTA",
     difficulty: 3,
     constant: {
-      amazon: 12.7,
       starplus: 12.7,
       star: 12.7,
       airplus: 12.7,
@@ -3740,7 +3165,6 @@ const constantTable = [
     title: "JULIAN",
     difficulty: 3,
     constant: {
-      amazon: 12.7,
       starplus: 12.7,
       star: 12.7,
       airplus: 12.7,
@@ -3753,7 +3177,6 @@ const constantTable = [
     title: "Bang Babang Bang!!!",
     difficulty: 3,
     constant: {
-      amazon: 12.8,
       starplus: 12.8,
       star: 12.8,
       airplus: 12.8,
@@ -3766,7 +3189,6 @@ const constantTable = [
     title: "奏者はただ背中と提琴で語るのみ",
     difficulty: 3,
     constant: {
-      amazon: 12.9,
       starplus: 12.9,
       star: 12.9,
       airplus: 0,
@@ -3779,7 +3201,6 @@ const constantTable = [
     title: "なるとなぎのパーフェクトロックンロール教室",
     difficulty: 3,
     constant: {
-      amazon: 12.8,
       starplus: 12.8,
       star: 12.8,
       airplus: 12.8,
@@ -3792,7 +3213,6 @@ const constantTable = [
     title: "My First Phone",
     difficulty: 3,
     constant: {
-      amazon: 12.8,
       starplus: 12.8,
       star: 12.8,
       airplus: 12.8,
@@ -3805,7 +3225,6 @@ const constantTable = [
     title: "今ぞ♡崇め奉れ☆オマエらよ！！～姫の秘メタル渇望～",
     difficulty: 3,
     constant: {
-      amazon: 12.8,
       starplus: 12.8,
       star: 12.8,
       airplus: 12.8,
@@ -3818,7 +3237,6 @@ const constantTable = [
     title: "怒槌",
     difficulty: 2,
     constant: {
-      amazon: 12.7,
       starplus: 12.7,
       star: 12.7,
       airplus: 12.4,
@@ -3831,7 +3249,6 @@ const constantTable = [
     title: "stella=steLLa",
     difficulty: 3,
     constant: {
-      amazon: 12.7,
       starplus: 12.7,
       star: 12.7,
       airplus: 12.7,
@@ -3844,7 +3261,6 @@ const constantTable = [
     title: "SNIPE WHOLE",
     difficulty: 3,
     constant: {
-      amazon: 12.7,
       starplus: 12.7,
       star: 12.7,
       airplus: 12.7,
@@ -3857,7 +3273,6 @@ const constantTable = [
     title: "MUSIC PЯAYER",
     difficulty: 3,
     constant: {
-      amazon: 12.8,
       starplus: 12.7,
       star: 12.7,
       airplus: 12.7,
@@ -3870,7 +3285,6 @@ const constantTable = [
     title: "ケモノガル",
     difficulty: 3,
     constant: {
-      amazon: 12.8,
       starplus: 12.8,
       star: 12.8,
       airplus: 12.8,
@@ -3883,7 +3297,6 @@ const constantTable = [
     title: "Paqqin",
     difficulty: 3,
     constant: {
-      amazon: 12.7,
       starplus: 12.7,
       star: 12.7,
       airplus: 12.7,
@@ -3896,7 +3309,6 @@ const constantTable = [
     title: "玩具狂奏曲 -終焉-",
     difficulty: 2,
     constant: {
-      amazon: 12.7,
       starplus: 12.7,
       star: 12.7,
       airplus: 12.7,
@@ -3909,7 +3321,6 @@ const constantTable = [
     title: "札付きのワル　～マイケルのうた～",
     difficulty: 3,
     constant: {
-      amazon: 12.7,
       starplus: 12.7,
       star: 12.7,
       airplus: 12.7,
@@ -3922,7 +3333,6 @@ const constantTable = [
     title: "ゲシュタルト！テスト期間！！",
     difficulty: 3,
     constant: {
-      amazon: 12.7,
       starplus: 12.7,
       star: 12.7,
       airplus: 12.7,
@@ -3935,7 +3345,6 @@ const constantTable = [
     title: "ドライヴ・オン・ザ・レインボー",
     difficulty: 3,
     constant: {
-      amazon: 12.7,
       starplus: 12.7,
       star: 12.7,
       airplus: 12.7,
@@ -3948,7 +3357,6 @@ const constantTable = [
     title: "TiamaT:F minor",
     difficulty: 2,
     constant: {
-      amazon: 12.8,
       starplus: 12.8,
       star: 12.8,
       airplus: 12.8,
@@ -3961,7 +3369,6 @@ const constantTable = [
     title: "キラメケ→Shoot it Now!",
     difficulty: 3,
     constant: {
-      amazon: 12.9,
       starplus: 12.9,
       star: 12.9,
       airplus: 0,
@@ -3974,7 +3381,6 @@ const constantTable = [
     title: "World Vanquisher",
     difficulty: 2,
     constant: {
-      amazon: 12.7,
       starplus: 12.7,
       star: 12.7,
       airplus: 0,
@@ -3987,7 +3393,6 @@ const constantTable = [
     title: "EXECUTOR",
     difficulty: 3,
     constant: {
-      amazon: 12.7,
       starplus: 12.7,
       star: 12.7,
       airplus: 0,
@@ -4000,7 +3405,6 @@ const constantTable = [
     title: "bubble attack",
     difficulty: 3,
     constant: {
-      amazon: 12.9,
       starplus: 12.9,
       star: 12.9,
       airplus: 0,
@@ -4013,7 +3417,6 @@ const constantTable = [
     title: "ぶいえす!!らいばる!!",
     difficulty: 3,
     constant: {
-      amazon: 13.2,
       starplus: 13.2,
       star: 13.2,
       airplus: 13.3,
@@ -4026,7 +3429,6 @@ const constantTable = [
     title: "ジングルベル",
     difficulty: 3,
     constant: {
-      amazon: 13.3,
       starplus: 13.3,
       star: 13.3,
       airplus: 13.3,
@@ -4039,7 +3441,6 @@ const constantTable = [
     title: "のぼれ！すすめ！高い塔",
     difficulty: 3,
     constant: {
-      amazon: 13.3,
       starplus: 13.3,
       star: 13.3,
       airplus: 0,
@@ -4052,7 +3453,6 @@ const constantTable = [
     title: "害虫",
     difficulty: 3,
     constant: {
-      amazon: 13.2,
       starplus: 13.2,
       star: 13.2,
       airplus: 0,
@@ -4065,7 +3465,6 @@ const constantTable = [
     title: "インビジブル",
     difficulty: 3,
     constant: {
-      amazon: 13.2,
       starplus: 13.2,
       star: 13.2,
       airplus: 13.2,
@@ -4078,7 +3477,6 @@ const constantTable = [
     title: "ラクガキスト",
     difficulty: 3,
     constant: {
-      amazon: 13.4,
       starplus: 13.4,
       star: 13.4,
       airplus: 13.4,
@@ -4091,7 +3489,6 @@ const constantTable = [
     title: "初音ミクの消失",
     difficulty: 3,
     constant: {
-      amazon: 13.4,
       starplus: 13.4,
       star: 13.4,
       airplus: 13.4,
@@ -4104,7 +3501,6 @@ const constantTable = [
     title: "カミサマネジマキ",
     difficulty: 3,
     constant: {
-      amazon: 13,
       starplus: 13,
       star: 13,
       airplus: 13,
@@ -4117,7 +3513,6 @@ const constantTable = [
     title: "Phantasm Brigade",
     difficulty: 3,
     constant: {
-      amazon: 13,
       starplus: 13,
       star: 13,
       airplus: 13,
@@ -4130,7 +3525,6 @@ const constantTable = [
     title: "患部で止まってすぐ溶ける～狂気の優曇華院",
     difficulty: 3,
     constant: {
-      amazon: 13.1,
       starplus: 13.1,
       star: 13.1,
       airplus: 13.1,
@@ -4143,7 +3537,6 @@ const constantTable = [
     title: "Imperishable Night 2006 (2016 Refine)",
     difficulty: 3,
     constant: {
-      amazon: 13.6,
       starplus: 13.6,
       star: 13.6,
       airplus: 13.6,
@@ -4156,7 +3549,6 @@ const constantTable = [
     title: "幻想のサテライト",
     difficulty: 3,
     constant: {
-      amazon: 13.1,
       starplus: 13.1,
       star: 13.2,
       airplus: 13.2,
@@ -4169,7 +3561,6 @@ const constantTable = [
     title: "最終鬼畜妹・一部声",
     difficulty: 3,
     constant: {
-      amazon: 13,
       starplus: 13,
       star: 13,
       airplus: 12.9,
@@ -4182,7 +3573,6 @@ const constantTable = [
     title: "Elemental Creation",
     difficulty: 3,
     constant: {
-      amazon: 13.5,
       starplus: 13.5,
       star: 13.5,
       airplus: 13.4,
@@ -4195,7 +3585,6 @@ const constantTable = [
     title: "Evans",
     difficulty: 3,
     constant: {
-      amazon: 13.4,
       starplus: 13.4,
       star: 13.4,
       airplus: 13.4,
@@ -4208,7 +3597,6 @@ const constantTable = [
     title: "Blue Noise",
     difficulty: 3,
     constant: {
-      amazon: 13.3,
       starplus: 13.1,
       star: 13,
       airplus: 13,
@@ -4221,7 +3609,6 @@ const constantTable = [
     title: "セイクリッド　ルイン",
     difficulty: 3,
     constant: {
-      amazon: 13.5,
       starplus: 13.5,
       star: 13.5,
       airplus: 0,
@@ -4234,7 +3621,6 @@ const constantTable = [
     title: "極圏",
     difficulty: 3,
     constant: {
-      amazon: 13.6,
       starplus: 13.6,
       star: 13.6,
       airplus: 0,
@@ -4247,7 +3633,6 @@ const constantTable = [
     title: "Scarlet Lance",
     difficulty: 3,
     constant: {
-      amazon: 13.6,
       starplus: 13.6,
       star: 13.6,
       airplus: 0,
@@ -4260,7 +3645,6 @@ const constantTable = [
     title: "Aragami",
     difficulty: 3,
     constant: {
-      amazon: 13.5,
       starplus: 13.5,
       star: 13.5,
       airplus: 13.4,
@@ -4273,7 +3657,6 @@ const constantTable = [
     title: "Vallista",
     difficulty: 3,
     constant: {
-      amazon: 13.6,
       starplus: 13.5,
       star: 13.5,
       airplus: 13.5,
@@ -4286,7 +3669,6 @@ const constantTable = [
     title: "conflict",
     difficulty: 3,
     constant: {
-      amazon: 13.3,
       starplus: 13.2,
       star: 13.2,
       airplus: 13.1,
@@ -4299,7 +3681,6 @@ const constantTable = [
     title: "Halcyon",
     difficulty: 3,
     constant: {
-      amazon: 13.3,
       starplus: 13.3,
       star: 13.3,
       airplus: 13.1,
@@ -4312,7 +3693,6 @@ const constantTable = [
     title: "Jack-the-Ripper◆",
     difficulty: 3,
     constant: {
-      amazon: 13.1,
       starplus: 13.1,
       star: 13.1,
       airplus: 13.1,
@@ -4325,7 +3705,6 @@ const constantTable = [
     title: "DRAGONLADY",
     difficulty: 3,
     constant: {
-      amazon: 13.2,
       starplus: 13.2,
       star: 13.2,
       airplus: 13.2,
@@ -4338,7 +3717,6 @@ const constantTable = [
     title: "AIR",
     difficulty: 3,
     constant: {
-      amazon: 13.4,
       starplus: 13.4,
       star: 13.2,
       airplus: 13.2,
@@ -4351,7 +3729,6 @@ const constantTable = [
     title: "DataErr0r",
     difficulty: 3,
     constant: {
-      amazon: 13,
       starplus: 13,
       star: 13,
       airplus: 13,
@@ -4364,7 +3741,6 @@ const constantTable = [
     title: "Dreadnought",
     difficulty: 3,
     constant: {
-      amazon: 13.6,
       starplus: 13.6,
       star: 13.6,
       airplus: 13.5,
@@ -4377,7 +3753,6 @@ const constantTable = [
     title: "Strahv",
     difficulty: 3,
     constant: {
-      amazon: 13.3,
       starplus: 13.3,
       star: 13.3,
       airplus: 13.3,
@@ -4390,7 +3765,6 @@ const constantTable = [
     title: "GOODTEK",
     difficulty: 3,
     constant: {
-      amazon: 13.3,
       starplus: 13.3,
       star: 13.3,
       airplus: 13.3,
@@ -4403,7 +3777,6 @@ const constantTable = [
     title: "Name of oath",
     difficulty: 3,
     constant: {
-      amazon: 13.5,
       starplus: 13.5,
       star: 13.5,
       airplus: 13.5,
@@ -4416,7 +3789,6 @@ const constantTable = [
     title: "分からない",
     difficulty: 3,
     constant: {
-      amazon: 13.2,
       starplus: 13.2,
       star: 13.2,
       airplus: 13.2,
@@ -4429,7 +3801,6 @@ const constantTable = [
     title: "Like the Wind [Reborn]",
     difficulty: 3,
     constant: {
-      amazon: 13.5,
       starplus: 13.5,
       star: 13.5,
       airplus: 13.5,
@@ -4442,7 +3813,6 @@ const constantTable = [
     title: "GEMINI -C-",
     difficulty: 3,
     constant: {
-      amazon: 13.2,
       starplus: 13.1,
       star: 13.1,
       airplus: 13.1,
@@ -4455,7 +3825,6 @@ const constantTable = [
     title: "We Gonna Journey",
     difficulty: 3,
     constant: {
-      amazon: 13.1,
       starplus: 13.1,
       star: 13.1,
       airplus: 13,
@@ -4468,7 +3837,6 @@ const constantTable = [
     title: "luna blu",
     difficulty: 3,
     constant: {
-      amazon: 13.5,
       starplus: 13.5,
       star: 13.4,
       airplus: 13.4,
@@ -4481,7 +3849,6 @@ const constantTable = [
     title: "luna blu",
     difficulty: 2,
     constant: {
-      amazon: 12,
       starplus: 12,
       star: 0,
       airplus: 0,
@@ -4494,7 +3861,6 @@ const constantTable = [
     title: "閃鋼のブリューナク",
     difficulty: 3,
     constant: {
-      amazon: 13.5,
       starplus: 13.5,
       star: 13.5,
       airplus: 13.4,
@@ -4507,7 +3873,6 @@ const constantTable = [
     title: "Gate of Fate",
     difficulty: 3,
     constant: {
-      amazon: 13.4,
       starplus: 13.4,
       star: 13.2,
       airplus: 13.2,
@@ -4520,7 +3885,6 @@ const constantTable = [
     title: "The wheel to the right",
     difficulty: 3,
     constant: {
-      amazon: 13.4,
       starplus: 13.4,
       star: 13.4,
       airplus: 13.3,
@@ -4533,7 +3897,6 @@ const constantTable = [
     title: "Tango Rouge",
     difficulty: 3,
     constant: {
-      amazon: 13,
       starplus: 13,
       star: 13,
       airplus: 12.9,
@@ -4546,7 +3909,6 @@ const constantTable = [
     title: "Gustav Battle",
     difficulty: 3,
     constant: {
-      amazon: 13,
       starplus: 13,
       star: 13,
       airplus: 13,
@@ -4559,7 +3921,6 @@ const constantTable = [
     title: "Gustav Battle",
     difficulty: 2,
     constant: {
-      amazon: 12,
       starplus: 12,
       star: 0,
       airplus: 0,
@@ -4572,7 +3933,6 @@ const constantTable = [
     title: "Cyberozar",
     difficulty: 3,
     constant: {
-      amazon: 13.2,
       starplus: 13.2,
       star: 13.2,
       airplus: 13.2,
@@ -4585,7 +3945,6 @@ const constantTable = [
     title: "Genesis",
     difficulty: 3,
     constant: {
-      amazon: 13.5,
       starplus: 13.5,
       star: 13.5,
       airplus: 13.5,
@@ -4598,7 +3957,6 @@ const constantTable = [
     title: "L'épisode",
     difficulty: 3,
     constant: {
-      amazon: 13.6,
       starplus: 13.5,
       star: 13.5,
       airplus: 13.3,
@@ -4611,7 +3969,6 @@ const constantTable = [
     title: "GOLDEN RULE",
     difficulty: 3,
     constant: {
-      amazon: 13.6,
       starplus: 13.6,
       star: 13.6,
       airplus: 13.6,
@@ -4624,7 +3981,6 @@ const constantTable = [
     title: "Philosopher",
     difficulty: 3,
     constant: {
-      amazon: 13.5,
       starplus: 13.5,
       star: 13.5,
       airplus: 13.4,
@@ -4637,7 +3993,6 @@ const constantTable = [
     title: "Oshama Scramble! (Cranky Remix)",
     difficulty: 3,
     constant: {
-      amazon: 13,
       starplus: 13,
       star: 13,
       airplus: 13,
@@ -4650,7 +4005,6 @@ const constantTable = [
     title: "紅華刑",
     difficulty: 3,
     constant: {
-      amazon: 13.4,
       starplus: 13.4,
       star: 13.4,
       airplus: 13.4,
@@ -4663,7 +4017,6 @@ const constantTable = [
     title: "Tidal Wave",
     difficulty: 3,
     constant: {
-      amazon: 13.5,
       starplus: 13.5,
       star: 13.5,
       airplus: 13.5,
@@ -4676,7 +4029,6 @@ const constantTable = [
     title: "BOKUTO",
     difficulty: 3,
     constant: {
-      amazon: 13,
       starplus: 13,
       star: 13,
       airplus: 13,
@@ -4689,7 +4041,6 @@ const constantTable = [
     title: "We Gonna Party -Feline Groove Mix-",
     difficulty: 3,
     constant: {
-      amazon: 13.3,
       starplus: 13.3,
       star: 13.3,
       airplus: 13.4,
@@ -4702,7 +4053,6 @@ const constantTable = [
     title: "おまかせ！！トラブルメイ娘☆とれびちゃん",
     difficulty: 3,
     constant: {
-      amazon: 13.1,
       starplus: 13.1,
       star: 13.1,
       airplus: 13.1,
@@ -4715,7 +4065,6 @@ const constantTable = [
     title: "オススメ☆♂♀☆でぃすとぴあ",
     difficulty: 3,
     constant: {
-      amazon: 13.4,
       starplus: 13.4,
       star: 13.5,
       airplus: 13.5,
@@ -4728,7 +4077,6 @@ const constantTable = [
     title: "Warcry",
     difficulty: 3,
     constant: {
-      amazon: 13.1,
       starplus: 13.1,
       star: 13.1,
       airplus: 13.1,
@@ -4741,7 +4089,6 @@ const constantTable = [
     title: "覚醒楽奏メタフィクション",
     difficulty: 3,
     constant: {
-      amazon: 13.3,
       starplus: 13.3,
       star: 13.3,
       airplus: 13.3,
@@ -4754,7 +4101,6 @@ const constantTable = [
     title: "Supersonic Generation",
     difficulty: 3,
     constant: {
-      amazon: 13.4,
       starplus: 13.4,
       star: 13.4,
       airplus: 13.4,
@@ -4767,7 +4113,6 @@ const constantTable = [
     title: "混沌を越えし我らが神聖なる調律主を讃えよ",
     difficulty: 2,
     constant: {
-      amazon: 13.2,
       starplus: 13.2,
       star: 13,
       airplus: 13,
@@ -4780,7 +4125,6 @@ const constantTable = [
     title: "トリスメギストス",
     difficulty: 3,
     constant: {
-      amazon: 13.2,
       starplus: 13.2,
       star: 13.2,
       airplus: 0,
@@ -4793,7 +4137,6 @@ const constantTable = [
     title: "立川浄穢捕物帳",
     difficulty: 3,
     constant: {
-      amazon: 13,
       starplus: 13,
       star: 13,
       airplus: 0,
@@ -4806,7 +4149,6 @@ const constantTable = [
     title: "眠れぬ夜君を想フ",
     difficulty: 3,
     constant: {
-      amazon: 13.3,
       starplus: 13.3,
       star: 13.3,
       airplus: 0,
@@ -4819,7 +4161,6 @@ const constantTable = [
     title: "JIGOKU STATION CENTRAL GATE",
     difficulty: 3,
     constant: {
-      amazon: 13.3,
       starplus: 13.3,
       star: 13.3,
       airplus: 0,
@@ -4832,7 +4173,6 @@ const constantTable = [
     title: "Twice up Scenery",
     difficulty: 3,
     constant: {
-      amazon: 13.2,
       starplus: 13.2,
       star: 13,
       airplus: 0,
@@ -4845,7 +4185,6 @@ const constantTable = [
     title: "Calamity Fortune",
     difficulty: 3,
     constant: {
-      amazon: 13.7,
       starplus: 13.7,
       star: 13.7,
       airplus: 0,
@@ -4858,7 +4197,6 @@ const constantTable = [
     title: "Finite",
     difficulty: 3,
     constant: {
-      amazon: 13.9,
       starplus: 13.8,
       star: 13.8,
       airplus: 13.8,
@@ -4871,7 +4209,6 @@ const constantTable = [
     title: "神威",
     difficulty: 3,
     constant: {
-      amazon: 13.9,
       starplus: 13.9,
       star: 13.9,
       airplus: 13.9,
@@ -4884,7 +4221,6 @@ const constantTable = [
     title: "HAELEQUIN (Original Remaster)",
     difficulty: 3,
     constant: {
-      amazon: 13.8,
       starplus: 13.8,
       star: 13.8,
       airplus: 13.8,
@@ -4897,7 +4233,6 @@ const constantTable = [
     title: "HAELEQUIN (Original Remaster)",
     difficulty: 2,
     constant: {
-      amazon: 12.2,
       starplus: 12.2,
       star: 0,
       airplus: 0,
@@ -4910,7 +4245,6 @@ const constantTable = [
     title: "FREEDOM DiVE",
     difficulty: 3,
     constant: {
-      amazon: 13.7,
       starplus: 13.7,
       star: 13.7,
       airplus: 13.7,
@@ -4923,7 +4257,6 @@ const constantTable = [
     title: "Angel dust",
     difficulty: 3,
     constant: {
-      amazon: 13.7,
       starplus: 13.7,
       star: 13.7,
       airplus: 13.6,
@@ -4936,7 +4269,6 @@ const constantTable = [
     title: "★LittlE HearTs★",
     difficulty: 3,
     constant: {
-      amazon: 13.8,
       starplus: 13.8,
       star: 13.7,
       airplus: 13.7,
@@ -4949,7 +4281,6 @@ const constantTable = [
     title: "Dengeki Tube",
     difficulty: 3,
     constant: {
-      amazon: 13.9,
       starplus: 13.8,
       star: 13.8,
       airplus: 13.8,
@@ -4962,7 +4293,6 @@ const constantTable = [
     title: "Garakuta Doll Play",
     difficulty: 3,
     constant: {
-      amazon: 13.8,
       starplus: 13.8,
       star: 13.8,
       airplus: 13.8,
@@ -4975,7 +4305,6 @@ const constantTable = [
     title: "AMAZING MIGHTYYYY!!!!",
     difficulty: 3,
     constant: {
-      amazon: 13.8,
       starplus: 13.8,
       star: 13.8,
       airplus: 0,
@@ -4988,7 +4317,6 @@ const constantTable = [
     title: "VERTeX",
     difficulty: 3,
     constant: {
-      amazon: 13.7,
       starplus: 13.8,
       star: 13.8,
       airplus: 0,
@@ -5001,7 +4329,6 @@ const constantTable = [
     title: "Contrapasso -inferno-",
     difficulty: 3,
     constant: {
-      amazon: 13.9,
       starplus: 13.9,
       star: 13.9,
       airplus: 13.9,
@@ -5014,7 +4341,6 @@ const constantTable = [
     title: "Xevel",
     difficulty: 3,
     constant: {
-      amazon: 13.9,
       starplus: 13.9,
       star: 13.9,
       airplus: 0,
@@ -5027,7 +4353,6 @@ const constantTable = [
     title: "エンドマークに希望と涙を添えて",
     difficulty: 3,
     constant: {
-      amazon: 13.7,
       starplus: 13.7,
       star: 13.7,
       airplus: 13.7,
@@ -5040,7 +4365,6 @@ const constantTable = [
     title: "宛城、炎上！！",
     difficulty: 3,
     constant: {
-      amazon: 13.8,
       starplus: 13.8,
       star: 13.8,
       airplus: 13.8,
@@ -5053,7 +4377,6 @@ const constantTable = [
     title: "Schrecklicher Aufstand",
     difficulty: 3,
     constant: {
-      amazon: 13.9,
       starplus: 13.9,
       star: 13.9,
       airplus: 13.9,
@@ -5066,7 +4389,6 @@ const constantTable = [
     title: "Devastating Blaster",
     difficulty: 3,
     constant: {
-      amazon: 13.9,
       starplus: 13.9,
       star: 13.9,
       airplus: 13.9,
@@ -5079,7 +4401,6 @@ const constantTable = [
     title: "Kattobi KEIKYU Rider",
     difficulty: 3,
     constant: {
-      amazon: 13.8,
       starplus: 13.8,
       star: 13.8,
       airplus: 0,
@@ -5092,7 +4413,6 @@ const constantTable = [
     title: "Glorious Crown (tpz over-Over-OVERCUTE REMIX)",
     difficulty: 3,
     constant: {
-      amazon: 13.9,
       starplus: 13.9,
       star: 13.9,
       airplus: 0,
@@ -5105,7 +4425,6 @@ const constantTable = [
     title: "Iudicium",
     difficulty: 3,
     constant: {
-      amazon: 13.7,
       starplus: 13.7,
       star: 13.7,
       airplus: 0,
@@ -5118,7 +4437,6 @@ const constantTable = [
     title: "怒槌",
     difficulty: 3,
     constant: {
-      amazon: 14,
       starplus: 14,
       star: 14,
       airplus: 13.9,
@@ -5131,7 +4449,6 @@ const constantTable = [
     title: "玩具狂奏曲 -終焉-",
     difficulty: 3,
     constant: {
-      amazon: 14,
       starplus: 14,
       star: 14,
       airplus: 13.9,
@@ -5144,7 +4461,6 @@ const constantTable = [
     title: "TiamaT:F minor",
     difficulty: 3,
     constant: {
-      amazon: 14,
       starplus: 14,
       star: 14,
       airplus: 14,
@@ -5157,7 +4473,6 @@ const constantTable = [
     title: "混沌を越えし我らが神聖なる調律主を讃えよ",
     difficulty: 3,
     constant: {
-      amazon: 14.1,
       starplus: 14.1,
       star: 14.1,
       airplus: 14,
@@ -5170,7 +4485,6 @@ const constantTable = [
     title: "World Vanquisher",
     difficulty: 3,
     constant: {
-      amazon: 14.1,
       starplus: 14.1,
       star: 14.1,
       airplus: 0,
@@ -5181,7 +4495,7 @@ const constantTable = [
   }
 ];
 
-const DEFAULTVERSION = "amazon"; // 現在のバージョン
+const DEFAULTVERSION = "starplus";
 
 // utility functions
 
@@ -5224,8 +4538,6 @@ const versionToId = str =>
     ? 3
     : str == "star"
     ? 4
-    : str == "starplus"
-    ? 5
     : DEFAULTVERSION;
 
 // スコアが無い曲の情報を取得(主に新曲用)
@@ -5276,7 +4588,7 @@ const mergeConstantTable = () => {
     output += split_target;
     output += splited[1];
     output += split_target;
-    output += "amazon:";
+    output += "starplus:";
     output += new_constant;
     output += ",";
     output += splited[2];
